@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, NavLink, useNavigate } from 'react-router-dom';
 import {
-  FiHome, FiMap, FiMapPin, FiBookmark, FiUsers, FiStar,
-  FiLogOut, FiMenu, FiX, FiPlus, FiEdit, FiTrash2, FiEye,
+  FiHome, FiMap, FiMapPin, FiBookmark, FiStar,
+  FiLogOut, FiMenu, FiX, FiPlus, FiTrash2, FiEye,
   FiCheck, FiAlertCircle,
 } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
-import { toursAPI, destinationsAPI, bookingsAPI, reviewsAPI } from '../../utils/api';
+import { toursAPI, bookingsAPI, reviewsAPI } from '../../utils/api';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
 const AdminLayout = ({ children }) => {
