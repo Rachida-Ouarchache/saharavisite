@@ -1,0 +1,396 @@
+{
+  "nav": {
+    "home": "Home",
+    "tours": "Tours",
+    "destinations": "Destinations",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "bookTour": "Book a Tour",
+    "admin": "Admin",
+    "logout": "Logout",
+    "tagline": "Tailored journeys across Morocco — since 2010"
+  },
+  "footer": {
+    "stayInspired": "Stay inspired",
+    "stayInspiredDesc": "Moroccan travel notes, private offers, and hidden places — curated for you.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "brandDesc": "Premium Moroccan travel since 2010. Journeys from the Sahara to the Atlantic — composed with care.",
+    "quickLinks": "Quick links",
+    "popularTours": "Popular tours",
+    "contact": "Contact",
+    "links": {
+      "allTours": "All tours",
+      "destinations": "Destinations",
+      "blog": "Blog & tips",
+      "about": "About Sahara Visite",
+      "book": "Book a tour"
+    },
+    "tours": {
+      "imperial": "Imperial Cities Grand Tour",
+      "sahara": "Sahara Desert Adventure",
+      "toubkal": "Toubkal Trek",
+      "northern": "Northern Morocco",
+      "atlantic": "Atlantic Coast Road Trip"
+    },
+    "address": "12 Rue Moulay Ali Cherif, Guéliz, Marrakech 40000, Morocco",
+    "officeHours": "Office hours",
+    "weekdays": "Mon–Sat: 9:00 – 18:00 (GMT+1)",
+    "sunday": "Sunday: 10:00 – 15:00",
+    "allRights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "about": {
+    "hero": {
+      "label": "Our Story",
+      "title": "About Sahara Visite"
+    },
+    "story": {
+      "label": "Who We Are",
+      "title": "Born in Morocco. Built for Travellers.",
+      "p1": "Sahara Visite was founded in 2010 by Youssef El Mansouri, a Marrakchi who grew up watching travellers fall in love with Morocco – and watching unscrupulous operators take advantage of their enthusiasm.",
+      "p2": "His vision was simple: create a travel company run by Moroccans, for the world, that would showcase the authentic beauty of the kingdom while supporting the local communities that make it so special.",
+      "p3": "Today, Sahara Visite has guided over 8,000 travellers from 60+ countries through Morocco's imperial cities, Saharan dunes, Atlantic coastline, and High Atlas mountains. Our team of 15 certified guides speaks 8 languages between them.",
+      "cta": "Plan Your Journey",
+      "founded": "Founded in Marrakech"
+    },
+    "values": {
+      "label": "What Drives Us",
+      "title": "Our Values",
+      "authentic": { "title": "Authentic Experiences", "desc": "We go beyond tourist facades to share the real Morocco." },
+      "quality": { "title": "Uncompromising Quality", "desc": "Carefully vetted accommodations, guides, and experiences." },
+      "responsible": { "title": "Responsible Tourism", "desc": "We support local communities and protect Morocco's heritage." },
+      "personalized": { "title": "Personalized Service", "desc": "Every journey is crafted around your unique desires." }
+    },
+    "team": {
+      "label": "The People Behind Your Journey",
+      "title": "Meet Our Team",
+      "member1": { "role": "Founder & Lead Guide", "bio": "20+ years guiding experience across Morocco. Speaks Arabic, Berber, French, and English." },
+      "member2": { "role": "Cultural Experience Manager", "bio": "Specialist in authentic cultural immersion, cooking classes, and artisan workshops." },
+      "member3": { "role": "Desert & Mountain Expert", "bio": "Sahara expert and Toubkal certified mountain guide. His camel caravans are legendary." },
+      "member4": { "role": "Client Experience Lead", "bio": "Ensures every Sahara Visite journey runs flawlessly from first inquiry to final goodbye." }
+    },
+    "stats": {
+      "years": "Years in Business",
+      "travellers": "Happy Travellers",
+      "destinations": "Destinations",
+      "rating": "Average Rating"
+    }
+  },
+  "tours": {
+    "hero": {
+      "label": "Explore Morocco",
+      "title": "All Tours",
+      "available": "{{count}} tours available"
+    },
+    "search": "Search tours...",
+    "filters": "Filters",
+    "clear": "Clear",
+    "clearFilters": "Clear Filters",
+    "region": "Region",
+    "allRegions": "All Regions",
+    "category": "Category",
+    "allCategories": "All Categories",
+    "difficulty": "Difficulty",
+    "allLevels": "All Levels",
+    "minPrice": "Min Price",
+    "maxPrice": "Max Price",
+    "maxDays": "Max Days",
+    "noResults": "No tours match your filters.",
+    "loading": "Loading tours...",
+    "sort": {
+      "recommended": "Recommended",
+      "priceAsc": "Price: Low to High",
+      "priceDesc": "Price: High to Low",
+      "durationAsc": "Duration: Shortest",
+      "durationDesc": "Duration: Longest",
+      "rating": "Best Rated"
+    }
+  },
+  "tourDetail": {
+    "notFound": "Tour not found",
+    "backToTours": "Back to Tours",
+    "featured": "Featured",
+    "days": "days",
+    "reviews": "reviews",
+    "perPerson": "per person",
+    "breadHome": "Home",
+    "breadTours": "Tours",
+    "tabs": {
+      "overview": "Overview",
+      "itinerary": "Itinerary",
+      "includes": "What's Included",
+      "reviews": "Reviews ({{count}})"
+    },
+    "overview": "Tour Overview",
+    "highlights": "Tour Highlights",
+    "map": "Tour Map",
+    "itinerary": "Day by Day Itinerary",
+    "day": "Day {{day}}",
+    "included": "Included",
+    "notIncluded": "Not Included",
+    "basedOn": "Based on {{count}} reviews",
+    "booking": {
+      "duration": "Duration",
+      "groupSize": "Group Size",
+      "languages": "Languages",
+      "region": "Region",
+      "maxPeople": "Max {{count}} people",
+      "daysCount": "{{count}} days"
+    },
+    "bookTour": "Book This Tour",
+    "askQuestion": "Ask a Question",
+    "freeCancellation": "Free cancellation up to 30 days before",
+    "maxPax": "Max {{count}} pax"
+  },
+  "tourCard": {
+    "featured": "⭐ Featured",
+    "fromPrice": "from ${{price}}",
+    "perPerson": "per person",
+    "days": "Days",
+    "availability": "Availability:",
+    "scheduledDepartures": "Scheduled departures",
+    "allYear": "All year",
+    "maxPax": "Max {{count}} pax",
+    "viewTour": "View Tour"
+  },
+  "contact": {
+    "hero": {
+      "label": "We'd Love to Hear From You",
+      "titleBook": "Book Your Tour",
+      "titleContact": "Contact & Booking"
+    },
+    "booking": {
+      "label": "Booking:",
+      "perPerson": "/ person"
+    },
+    "form": {
+      "titleBook": "Complete Your Booking",
+      "titleContact": "Send Us a Message",
+      "personalInfo": "Personal Information",
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "email": "Email Address *",
+      "phone": "Phone Number *",
+      "nationality": "Nationality",
+      "tripDetails": "Trip Details",
+      "tourInterest": "Tour / Destination Interest *",
+      "startDate": "Preferred Start Date *",
+      "adults": "Adults *",
+      "children": "Children",
+      "specialRequests": "Special Requests or Questions",
+      "specialRequestsPlaceholder": "Dietary requirements, mobility needs, special occasions, specific interests...",
+      "submitBooking": "Submit Booking Request",
+      "sendMessage": "Send Message",
+      "submitting": "Submitting...",
+      "disclaimer": "We'll respond within 24 hours. No payment required at this stage.",
+      "estimatedTotal": "Estimated Total:"
+    },
+    "success": {
+      "title": "Booking Received!",
+      "text": "Thank you! Your booking request has been submitted successfully.",
+      "confirmationLabel": "Your confirmation number:",
+      "followup": "We'll send a confirmation email and contact you within 24 hours.",
+      "explore": "Explore More Tours",
+      "another": "Submit Another Request"
+    },
+    "info": {
+      "title": "Contact Information",
+      "office": "Office",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "whatsapp": "WhatsApp us",
+      "whatsappDesc": "Get a quick response on WhatsApp",
+      "whatsappBtn": "💬 Chat on WhatsApp",
+      "mapDesc": "Guéliz, Marrakech – close to Djemaa el-Fna"
+    }
+  },
+  "destinations": {
+    "hero": {
+      "label": "Where Will You Go?",
+      "title": "Moroccan Destinations",
+      "subtitle": "From ancient medinas to endless dunes"
+    },
+    "search": "Search destinations...",
+    "regions": {
+      "all": "All",
+      "south": "South",
+      "north": "North",
+      "atlantic": "Atlantic Coast",
+      "imperial": "Imperial Cities"
+    },
+    "loading": "Loading destinations...",
+    "noResults": "No destinations found.",
+    "count": "{{count}} destinations found"
+  },
+  "destinationDetail": {
+    "notFound": "Destination not found",
+    "backTo": "Back to Destinations",
+    "breadHome": "Home",
+    "breadDest": "Destinations",
+    "about": "About {{name}}",
+    "highlights": "Top Highlights",
+    "attractions": "Must-See Attractions",
+    "location": "Location",
+    "whenToVisit": "When to Visit",
+    "bestTime": "Best Time:",
+    "summer": "Summer:",
+    "winter": "Winter:",
+    "practicalTips": "Practical Tips",
+    "cta": {
+      "title": "Ready to Visit {{name}}?",
+      "desc": "Let us plan your perfect trip.",
+      "btn": "Get a Free Quote"
+    },
+    "relatedTours": "Tours to {{name}}",
+    "allTours": "All tours"
+  },
+  "blog": {
+    "hero": {
+      "label": "Travel Inspiration",
+      "title": "Our Blog",
+      "articles": "{{count}} articles published"
+    },
+    "search": "Search articles...",
+    "categories": {
+      "all": "All",
+      "tips": "Travel Tips",
+      "destinations": "Destinations",
+      "culture": "Culture",
+      "food": "Food",
+      "adventure": "Adventure",
+      "photography": "Photography"
+    },
+    "loading": "Loading articles...",
+    "noResults": "No articles found.",
+    "clearFilters": "Clear Filters"
+  },
+  "blogPost": {
+    "notFound": "Article not found",
+    "backToBlog": "Back to Blog",
+    "breadHome": "Home",
+    "breadBlog": "Blog",
+    "minRead": "min read",
+    "views": "views",
+    "relatedArticles": "Related Articles",
+    "cta": {
+      "title": "Ready for Morocco?",
+      "desc": "Let us plan your perfect journey.",
+      "btn": "Get a Free Quote"
+    }
+  },
+  "experienceDetail": {
+    "signatureJourney": "Signature journey",
+    "backToExp": "Back to experiences",
+    "overview": "Experience Overview",
+    "overviewSuffix": "Every detail is curated by our local team to combine privacy, comfort, and authentic Moroccan character.",
+    "highlights": "Highlights",
+    "included": "Included",
+    "notIncluded": "Not Included",
+    "itinerary": "Sample Itinerary",
+    "day": "Day {{day}}",
+    "tripDetails": "Trip Details",
+    "availability": "Availability:",
+    "from": "From:",
+    "to": "To:",
+    "viewActivities": "View activities",
+    "fromPrice": "From price",
+    "perAdult": "per adult (indicative)",
+    "reservation": {
+      "title": "Reservation Form",
+      "desc": "Fill in your details and our team will contact you within 24 hours."
+    },
+    "success": {
+      "text": "Booking request received.",
+      "confirmation": "Confirmation number:"
+    },
+    "form": {
+      "personalInfo": "Personal information",
+      "tripDetails": "Trip details",
+      "firstNamePlaceholder": "First name *",
+      "lastNamePlaceholder": "Last name *",
+      "emailPlaceholder": "Email *",
+      "phonePlaceholder": "Phone *",
+      "nationalityPlaceholder": "Nationality",
+      "specialRequestsPlaceholder": "Special requests: dietary, mobility, celebration, etc.",
+      "estimatedTotal": "Estimated total",
+      "submitBtn": "Submit booking request",
+      "submitting": "Submitting..."
+    }
+  },
+  "experienceActivities": {
+    "activities": "Activities",
+    "subtitle": "Handpicked moments — guided, paced, and coordinated by our local team.",
+    "backToTrip": "Back to trip details",
+    "noActivities": "Activities for this journey will be listed soon.",
+    "photoLabel": "Photo {{n}} of {{total}} — {{title}}",
+    "cta": {
+      "title": "Ready to reserve?",
+      "desc": "Complete the reservation form on the trip page — our team will confirm within 24 hours.",
+      "btn": "Continue to reservation"
+    }
+  },
+  "home": {
+    "hero": {
+      "label": "Curated luxury travel",
+      "title": "Discover the Luxury of Morocco",
+      "subtitle": "Exclusive journeys crafted for unforgettable experiences",
+      "cta": "Explore Experiences"
+    },
+    "experiences": {
+      "label": "Our circuits",
+      "title": "Morocco Tours",
+      "subtitle": "Choose your package — main 10-day circuit or grand 12-day journey to Agadir.",
+      "mainCircuit": "Main circuit",
+      "viewCircuit": "View circuit"
+    },
+    "destinations": {
+      "label": "Explore",
+      "title": "Top Destinations",
+      "desc": "From imperial cities to blue-washed alleys and golden dunes — each region reveals another layer of Morocco."
+    },
+    "why": {
+      "label": "The MorocElite difference",
+      "title": "Why Choose Us",
+      "features": {
+        "tailor": { "title": "Tailor-made trips", "text": "Bespoke routing and rhythm — designed around your calendar and passions." },
+        "transport": { "title": "Private transport", "text": "Chauffeured luxury vehicles and discrete airport transfers across every leg." },
+        "accommodation": { "title": "Luxury accommodations", "text": "Riads, desert camps, and five-star resorts vetted for service and atmosphere." },
+        "guides": { "title": "Expert local guides", "text": "Historians and storytellers who open doors the guidebooks never mention." }
+      }
+    },
+    "about": {
+      "label": "About MorocElite",
+      "title": "The quiet art of Moroccan luxury",
+      "p1": "We are a boutique atelier of travel — composing private journeys for guests who value time, beauty, and flawless execution. From the first conversation to your final transfer, a single concierge owns your file.",
+      "p2": "Our relationships with riad owners, camp operators, and guides have been cultivated over years. That access translates into rooms held for you, doors opened at the right moment, and itineraries that feel effortless."
+    },
+    "testimonials": {
+      "label": "Testimonials",
+      "title": "Trusted by discerning travelers",
+      "reviews": [
+        { "quote": "Best luxury experience in Morocco! Every detail felt considered — from the riad to our private guide in the medina.", "name": "Alexandra M.", "place": "New York" },
+        { "quote": "The desert camp was beyond imagination. MorocElite understood exactly the level of comfort we wanted.", "name": "James & Claire T.", "place": "London" },
+        { "quote": "Impeccable planning and discretion. We discovered places we would never have found on our own.", "name": "Sophie L.", "place": "Paris" }
+      ]
+    },
+    "cta": {
+      "title": "Ready for your luxury escape?",
+      "desc": "Share your dates and preferences — our concierge team will reply with a tailored proposal.",
+      "btn": "Book Your Trip"
+    }
+  },
+  "eliteNav": {
+    "bookNow": "Book Now",
+    "enquire": "Enquire",
+    "navigate": "Navigate",
+    "follow": "Follow",
+    "brandDesc": "Private luxury travel across Morocco. Crafted itineraries, exceptional stays, and seamless service.",
+    "allRights": "All rights reserved.",
+    "designed": "Designed for the art of slow, elegant travel.",
+    "location": "Marrakech & Casablanca"
+  }
+}

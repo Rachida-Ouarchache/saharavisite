@@ -1,0 +1,80 @@
+{
+  "villes-imperiales-desert-10-jours": {
+    "title": "Villes impériales & désert — 10 jours",
+    "description": "Le classique du Maroc en 10 jours : Casablanca, Rabat, Meknès, Volubilis, Fès, Sahara, bivouac de luxe, Todra, kasbahs et Marrakech — pension complète.",
+    "duration": "10 jours / 8 nuits",
+    "availability": "Départs hebdomadaires (2–6 pers.)",
+    "highlights": [
+      "Rabat, Meknès, Volubilis et Fès (UNESCO)",
+      "Merzouga, bivouac de luxe, 4×4 et dromadaires",
+      "Gorges du Todra, vallée des roses, Aït Ben Haddou",
+      "Marrakech : Majorelle, médina et Jemaa el-Fnaa",
+      "Pension complète — 24 repas"
+    ],
+    "included": [
+      "8 nuits : 6 hôtel 4★, 1 Sahara, 1 bivouac luxe",
+      "Pension complète (24 repas)",
+      "Minibus climatisé, guide francophone",
+      "Guides locaux, 4×4, dromadaires, entrées monuments"
+    ],
+    "excluded": ["Vols", "Assurance", "Boissons", "Pourboires", "Options"],
+    "itinerary": [
+      { "title": "Casablanca / Rabat (90 km)", "text": "Arrivée à Casablanca. Tour panoramique : Nations Unies, Mohammed V, Anfa, corniche Ain Diab, mosquée Hassan II (ext.), Habbous. Rabat. Dîner et nuit. (D/S)" },
+      { "title": "Rabat / Meknès / Volubilis / Fès (226 km)", "text": "Rabat : Tour Hassan, mausolée Mohammed V, Méchouar, palais royal, kasbah Oudayas, Chellah. Meknès : El Hedim, Bab Mansour, greniers Moulay Ismaïl. Volubilis (UNESCO), Moulay Idriss. Fès. (PD/D/S)" },
+      { "title": "Fès", "text": "Médina UNESCO : Fès El Bali, Bab Boujloud, tanneries Chouara, Nejjarine, Attarine, Al Quaraouiyine. Déjeuner palais. Palais royal, tombeaux mérinides, poterie. (PD/D/S)" },
+      { "title": "Fès / Merzouga (464 km)", "text": "Via Ifrane, Azrou, Midelt, Errachidia, palmeraie Tafilalet, vallée du Ziz, col Talghemt (1907 m). Erg Chebbi. (PD/D/S)" },
+      { "title": "Merzouga / Bivouac de luxe", "text": "4×4 Erg Chebbi, villages nomades, gnaoua. Balade dromadaire au coucher du soleil. Nuit bivouac de luxe. (PD/D/S)" },
+      { "title": "Bivouac / Todra / Dadès (270 km)", "text": "Lever du soleil. Gorges du Todra (300 m), palmeraie. Vallée du Dadès. (PD/D/S)" },
+      { "title": "Dadès / Marrakech (324 km)", "text": "Vallée des roses, Ouarzazate, kasbah Taourirt, Aït Ben Haddou (UNESCO), col Tizi n'Tichka (2260 m). Marrakech. (PD/D/S)" },
+      { "title": "Marrakech", "text": "Majorelle, Ménara, remparts. Koutoubia, Bahia, Mellah, médina UNESCO, Jardin Secret, Jemaa el-Fnaa. (PD/D/S)" },
+      { "title": "Marrakech", "text": "Journée libre ou excursions optionnelles. (PD/D/S)" },
+      { "title": "Marrakech / Casablanca", "text": "Transfert aéroport Marrakech ou Casablanca. Fin du circuit. (PD)" }
+    ],
+    "activities": [
+      { "title": "Casablanca & Hassan II", "description": "Capitale économique et grande mosquée." },
+      { "title": "Volubilis & Fès", "description": "Ruines romaines et médina impériale." },
+      { "title": "Bivouac Erg Chebbi", "description": "Dunes, étoiles et dîner berbère." },
+      { "title": "Todra & Aït Ben Haddou", "description": "Gorges et ksar UNESCO." },
+      { "title": "Marrakech", "description": "Majorelle et Jemaa el-Fnaa." }
+    ]
+  },
+  "grand-circuit-maroc-12-jours": {
+    "title": "Grand circuit du Maroc — 12 jours",
+    "description": "Casablanca à Agadir : Chefchaouen, Fès, Sahara, kasbahs, Marrakech, Essaouira et séjour tout inclus Iberostar.",
+    "duration": "12 jours",
+    "availability": "Sur mesure",
+    "highlights": [
+      "Chefchaouen, Fès et villes impériales",
+      "Sahara, bivouac, Todra, Aït Ben Haddou",
+      "Marrakech et dîner Dar Essalam",
+      "Essaouira et Agadir tout inclus"
+    ],
+    "included": [
+      "Guide francophone",
+      "Transport privé et 4×4",
+      "Hébergements selon programme",
+      "PD/D/S — PD/AI à Agadir"
+    ],
+    "excluded": ["Vols", "Assurance", "Boissons et pourboires"],
+    "itinerary": [
+      { "title": "Casablanca", "text": "Accueil, Hassan II, tour panoramique. Hôtel Idou Anfa." },
+      { "title": "Casablanca / Rabat", "text": "Palais royal, Chellah, Tour Hassan, kasbah Oudayas. Riad Zyo." },
+      { "title": "Rabat / Chefchaouen", "text": "Ville bleue du Rif. Riad Hicham." },
+      { "title": "Chefchaouen / Fès", "text": "Volubilis, Meknès. Riad Dilar." },
+      { "title": "Fès", "text": "Médina UNESCO, tanneries, Bab Boujloud. Riad Dilar." },
+      { "title": "Fès / Merzouga", "text": "Ifrane, Ziz, Erg Chebbi. Bivouac de luxe." },
+      { "title": "Merzouga", "text": "4×4, dromadaires. Auberge du Sud." },
+      { "title": "Merzouga / Ouarzazate", "text": "Gorges du Todra. Dar Chamaa." },
+      { "title": "Ouarzazate / Marrakech", "text": "Aït Ben Haddou, Tizi n'Tichka. Kech Boutique." },
+      { "title": "Marrakech", "text": "Majorelle, médina, Dar Essalam. Kech Boutique." },
+      { "title": "Marrakech / Essaouira", "text": "Argan, Skala, médina. Côté Océan Mogador." },
+      { "title": "Essaouira / Agadir", "text": "Kasbah Oufella. Iberostar Founty Beach (PD/AI)." }
+    ],
+    "activities": [
+      { "title": "Nord & Chefchaouen", "description": "Villes impériales et perle bleue." },
+      { "title": "Sahara", "description": "Bivouac, 4×4 et dunes." },
+      { "title": "Kasbahs & Marrakech", "description": "Aït Ben Haddou et ville ocre." },
+      { "title": "Côte atlantique", "description": "Essaouira et Agadir." }
+    ]
+  }
+}

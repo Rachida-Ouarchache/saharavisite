@@ -1,0 +1,80 @@
+{
+  "villes-imperiales-desert-10-jours": {
+    "title": "Imperial Cities & Desert — 10 Days",
+    "description": "The classic Morocco in 10 days: Casablanca, Rabat, Meknes, Volubilis, Fes, Sahara, luxury camp, Todra, kasbahs and Marrakech — full board.",
+    "duration": "10 days / 8 nights",
+    "availability": "Weekly departures (2–6 people)",
+    "highlights": [
+      "Rabat, Meknes, Volubilis and Fes (UNESCO)",
+      "Merzouga, luxury camp, 4×4 and camels",
+      "Todra Gorges, Rose Valley, Ait Ben Haddou",
+      "Marrakech: Majorelle, medina and Jemaa el-Fnaa",
+      "Full board — 24 meals"
+    ],
+    "included": [
+      "8 nights: 6× 4★ hotel, 1 Sahara, 1 luxury camp",
+      "Full board (24 meals)",
+      "Air-conditioned minibus, French-speaking guide",
+      "Local guides, 4×4, camels, monument entries"
+    ],
+    "excluded": ["Flights", "Insurance", "Drinks", "Tips", "Optional extras"],
+    "itinerary": [
+      { "title": "Casablanca / Rabat (90 km)", "text": "Arrival in Casablanca. Panoramic tour: United Nations, Mohammed V, Anfa, Ain Diab corniche, Hassan II Mosque (ext.), Habbous. Rabat. Dinner and overnight. (D/B)" },
+      { "title": "Rabat / Meknes / Volubilis / Fes (226 km)", "text": "Rabat: Hassan Tower, Mohammed V Mausoleum, Mechouar, Royal Palace, Oudayas Kasbah, Chellah. Meknes: El Hedim, Bab Mansour, Moulay Ismail granaries. Volubilis (UNESCO), Moulay Idriss. Fes. (B/L/D)" },
+      { "title": "Fes", "text": "UNESCO medina: Fes El Bali, Bab Boujloud, Chouara tanneries, Nejjarine, Attarine, Al Quaraouiyine. Palace lunch. Royal Palace, Merinid tombs, pottery. (B/L/D)" },
+      { "title": "Fes / Merzouga (464 km)", "text": "Via Ifrane, Azrou, Midelt, Errachidia, Tafilalet palm grove, Ziz Valley, Talghemt pass (1907 m). Erg Chebbi. (B/L/D)" },
+      { "title": "Merzouga / Luxury Camp", "text": "4×4 Erg Chebbi, nomad villages, gnawa music. Camel ride at sunset. Luxury camp overnight. (B/L/D)" },
+      { "title": "Camp / Todra / Dades (270 km)", "text": "Sunrise. Todra Gorges (300 m), palm grove. Dades Valley. (B/L/D)" },
+      { "title": "Dades / Marrakech (324 km)", "text": "Rose Valley, Ouarzazate, Taourirt Kasbah, Ait Ben Haddou (UNESCO), Tizi n'Tichka pass (2260 m). Marrakech. (B/L/D)" },
+      { "title": "Marrakech", "text": "Majorelle, Menara, ramparts. Koutoubia, Bahia, Mellah, UNESCO medina, Secret Garden, Jemaa el-Fnaa. (B/L/D)" },
+      { "title": "Marrakech", "text": "Free day or optional excursions. (B/L/D)" },
+      { "title": "Marrakech / Casablanca", "text": "Transfer to Marrakech or Casablanca airport. End of tour. (B)" }
+    ],
+    "activities": [
+      { "title": "Casablanca & Hassan II", "description": "Economic capital and grand mosque." },
+      { "title": "Volubilis & Fes", "description": "Roman ruins and imperial medina." },
+      { "title": "Erg Chebbi Luxury Camp", "description": "Dunes, stars and Berber dinner." },
+      { "title": "Todra & Ait Ben Haddou", "description": "Gorges and UNESCO ksar." },
+      { "title": "Marrakech", "description": "Majorelle and Jemaa el-Fnaa." }
+    ]
+  },
+  "grand-circuit-maroc-12-jours": {
+    "title": "Grand Morocco Tour — 12 Days",
+    "description": "Casablanca to Agadir: Chefchaouen, Fes, Sahara, kasbahs, Marrakech, Essaouira and all-inclusive Iberostar stay.",
+    "duration": "12 days",
+    "availability": "Tailor-made",
+    "highlights": [
+      "Chefchaouen, Fes and imperial cities",
+      "Sahara, camp, Todra, Ait Ben Haddou",
+      "Marrakech and Dar Essalam dinner",
+      "Essaouira and all-inclusive Agadir"
+    ],
+    "included": [
+      "French-speaking guide",
+      "Private transport and 4×4",
+      "Accommodation as per programme",
+      "B/L/D — B/AI in Agadir"
+    ],
+    "excluded": ["Flights", "Insurance", "Drinks and tips"],
+    "itinerary": [
+      { "title": "Casablanca", "text": "Welcome, Hassan II, panoramic tour. Idou Anfa Hotel." },
+      { "title": "Casablanca / Rabat", "text": "Royal Palace, Chellah, Hassan Tower, Oudayas Kasbah. Riad Zyo." },
+      { "title": "Rabat / Chefchaouen", "text": "Blue city of the Rif. Riad Hicham." },
+      { "title": "Chefchaouen / Fes", "text": "Volubilis, Meknes. Riad Dilar." },
+      { "title": "Fes", "text": "UNESCO medina, tanneries, Bab Boujloud. Riad Dilar." },
+      { "title": "Fes / Merzouga", "text": "Ifrane, Ziz, Erg Chebbi. Luxury camp." },
+      { "title": "Merzouga", "text": "4×4, camels. Auberge du Sud." },
+      { "title": "Merzouga / Ouarzazate", "text": "Todra Gorges. Dar Chamaa." },
+      { "title": "Ouarzazate / Marrakech", "text": "Ait Ben Haddou, Tizi n'Tichka. Kech Boutique." },
+      { "title": "Marrakech", "text": "Majorelle, medina, Dar Essalam. Kech Boutique." },
+      { "title": "Marrakech / Essaouira", "text": "Argan, Skala, medina. Côté Océan Mogador." },
+      { "title": "Essaouira / Agadir", "text": "Kasbah Oufella. Iberostar Founty Beach (B/AI)." }
+    ],
+    "activities": [
+      { "title": "North & Chefchaouen", "description": "Imperial cities and blue pearl." },
+      { "title": "Sahara", "description": "Camp, 4×4 and dunes." },
+      { "title": "Kasbahs & Marrakech", "description": "Ait Ben Haddou and ochre city." },
+      { "title": "Atlantic Coast", "description": "Essaouira and Agadir." }
+    ]
+  }
+}

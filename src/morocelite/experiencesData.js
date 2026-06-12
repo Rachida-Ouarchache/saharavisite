@@ -1,0 +1,92 @@
+const experiences = [
+  {
+    slug: 'villes-imperiales-desert-10-jours',
+    featured: true,
+    title: 'Villes impériales & désert — 10 jours',
+    description:
+      'Le classique du Maroc en 10 jours : Casablanca, Rabat, Meknès, Volubilis, Fès, Sahara, bivouac de luxe, Todra, kasbahs et Marrakech — pension complète.',
+    duration: '10 jours / 8 nuits',
+    availability: 'Départs hebdomadaires (2–6 pers.)',
+    from: 'Casablanca',
+    to: 'Marrakech',
+    image:
+      'https://res.cloudinary.com/dc3uvcobc/image/upload/w_1400,q_auto,f_auto/v1775673144/nike159-merzouga-4686151_640_wg12xk.jpg',
+    highlights: [
+      'Rabat, Meknès, Volubilis et Fès (UNESCO)',
+      'Merzouga, bivouac de luxe, 4×4 et dromadaires',
+      'Gorges du Todra, vallée des roses, Aït Ben Haddou',
+      'Marrakech : Majorelle, médina et Jemaa el-Fnaa',
+      'Pension complète — 24 repas',
+    ],
+    fromPrice: 2990,
+    included: [
+      '8 nuits : 6 hôtel 4★, 1 Sahara, 1 bivouac luxe',
+      'Pension complète (24 repas)',
+      'Minibus climatisé, guide francophone',
+      'Guides locaux, 4×4, dromadaires, entrées monuments',
+    ],
+    excluded: ['Vols', 'Assurance', 'Boissons', 'Pourboires', 'Options'],
+    itinerary: [
+      { day: 1, title: 'Casablanca / Rabat (90 km)', text: 'Arrivée à Casablanca. Tour panoramique : Nations Unies, Mohammed V, Anfa, corniche Ain Diab, mosquée Hassan II (ext.), Habbous. Rabat. Dîner et nuit. (D/S)' },
+      { day: 2, title: 'Rabat / Meknès / Volubilis / Fès (226 km)', text: 'Rabat : Tour Hassan, mausolée Mohammed V, Méchouar, palais royal, kasbah Oudayas, Chellah. Meknès : El Hedim, Bab Mansour, greniers Moulay Ismaïl. Volubilis (UNESCO), Moulay Idriss. Fès. (PD/D/S)' },
+      { day: 3, title: 'Fès', text: 'Médina UNESCO : Fès El Bali, Bab Boujloud, tanneries Chouara, Nejjarine, Attarine, Al Quaraouiyine. Déjeuner palais. Palais royal, tombeaux mérinides, poterie. (PD/D/S)' },
+      { day: 4, title: 'Fès / Merzouga (464 km)', text: 'Via Ifrane, Azrou, Midelt, Errachidia, palmeraie Tafilalet, vallée du Ziz, col Talghemt (1907 m). Erg Chebbi. (PD/D/S)' },
+      { day: 5, title: 'Merzouga / Bivouac de luxe', text: '4×4 Erg Chebbi, villages nomades, gnaoua. Balade dromadaire au coucher du soleil. Nuit bivouac de luxe. (PD/D/S)' },
+      { day: 6, title: 'Bivouac / Todra / Dadès (270 km)', text: 'Lever du soleil. Gorges du Todra (300 m), palmeraie. Vallée du Dadès. (PD/D/S)' },
+      { day: 7, title: 'Dadès / Marrakech (324 km)', text: 'Vallée des roses, Ouarzazate, kasbah Taourirt, Aït Ben Haddou (UNESCO), col Tizi n\'Tichka (2260 m). Marrakech. (PD/D/S)' },
+      { day: 8, title: 'Marrakech', text: 'Majorelle, Ménara, remparts. Koutoubia, Bahia, Mellah, médina UNESCO, Jardin Secret, Jemaa el-Fnaa. (PD/D/S)' },
+      { day: 9, title: 'Marrakech', text: 'Journée libre ou excursions optionnelles. (PD/D/S)' },
+      { day: 10, title: 'Marrakech / Casablanca', text: 'Transfert aéroport Marrakech ou Casablanca. Fin du circuit. (PD)' },
+    ],
+    activities: [
+      { title: 'Casablanca & Hassan II', description: 'Capitale économique et grande mosquée.', images: ['https://images.unsplash.com/photo-1569383746727-6e1ce1789789?w=900&q=80', 'https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=900&q=80', 'https://images.unsplash.com/photo-1489743342563-75341147e9d2?w=900&q=80'] },
+      { title: 'Volubilis & Fès', description: 'Ruines romaines et médina impériale.', images: ['https://res.cloudinary.com/dc3uvcobc/image/upload/w_900,q_auto,f_auto/v1775672669/monlaw-morocco-3794306_640_wsjcrz.jpg', 'https://images.unsplash.com/photo-1452860606245-08befcffb45f?w=900&q=80', 'https://images.unsplash.com/photo-1528183429752-a97d0e99eee1?w=900&q=80'] },
+      { title: 'Bivouac Erg Chebbi', description: 'Dunes, étoiles et dîner berbère.', images: ['https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=80', 'https://images.unsplash.com/photo-1552663495-7f2b5857f4c1?w=900&q=80', 'https://images.unsplash.com/photo-1542332213-31fea3cfa634?w=900&q=80'] },
+      { title: 'Todra & Aït Ben Haddou', description: 'Gorges et ksar UNESCO.', images: ['https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80', 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=900&q=80', 'https://res.cloudinary.com/dc3uvcobc/image/upload/w_900,q_auto,f_auto/v1775672670/travelurdream-morocco-3814316_1280_g6gac4.jpg'] },
+      { title: 'Marrakech', description: 'Majorelle et Jemaa el-Fnaa.', images: ['https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=900&q=80', 'https://images.unsplash.com/photo-1539650116574-75c0c6d91767?w=900&q=80', 'https://images.unsplash.com/photo-1528183429752-a97d0e99eee1?w=900&q=80'] },
+    ],
+  },
+  {
+    slug: 'grand-circuit-maroc-12-jours',
+    title: 'Grand circuit du Maroc — 12 jours',
+    description:
+      'Casablanca à Agadir : Chefchaouen, Fès, Sahara, kasbahs, Marrakech, Essaouira et séjour tout inclus Iberostar.',
+    duration: '12 jours',
+    availability: 'Sur mesure',
+    from: 'Casablanca',
+    to: 'Agadir',
+    image:
+      'https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1400&q=80',
+    highlights: [
+      'Chefchaouen, Fès et villes impériales',
+      'Sahara, bivouac, Todra, Aït Ben Haddou',
+      'Marrakech et dîner Dar Essalam',
+      'Essaouira et Agadir tout inclus',
+    ],
+    fromPrice: 3850,
+    included: ['Guide francophone', 'Transport privé et 4×4', 'Hébergements selon programme', 'PD/D/S — PD/AI à Agadir'],
+    excluded: ['Vols', 'Assurance', 'Boissons et pourboires'],
+    itinerary: [
+      { day: 1, title: 'Casablanca', text: 'Accueil, Hassan II, tour panoramique. Hôtel Idou Anfa.' },
+      { day: 2, title: 'Casablanca / Rabat', text: 'Palais royal, Chellah, Tour Hassan, kasbah Oudayas. Riad Zyo.' },
+      { day: 3, title: 'Rabat / Chefchaouen', text: 'Ville bleue du Rif. Riad Hicham.' },
+      { day: 4, title: 'Chefchaouen / Fès', text: 'Volubilis, Meknès. Riad Dilar.' },
+      { day: 5, title: 'Fès', text: 'Médina UNESCO, tanneries, Bab Boujloud. Riad Dilar.' },
+      { day: 6, title: 'Fès / Merzouga', text: 'Ifrane, Ziz, Erg Chebbi. Bivouac de luxe.' },
+      { day: 7, title: 'Merzouga', text: '4×4, dromadaires. Auberge du Sud.' },
+      { day: 8, title: 'Merzouga / Ouarzazate', text: 'Gorges du Todra. Dar Chamaa.' },
+      { day: 9, title: 'Ouarzazate / Marrakech', text: 'Aït Ben Haddou, Tizi n\'Tichka. Kech Boutique.' },
+      { day: 10, title: 'Marrakech', text: 'Majorelle, médina, Dar Essalam. Kech Boutique.' },
+      { day: 11, title: 'Marrakech / Essaouira', text: 'Argan, Skala, médina. Côté Océan Mogador.' },
+      { day: 12, title: 'Essaouira / Agadir', text: 'Kasbah Oufella. Iberostar Founty Beach (PD/AI).' },
+    ],
+    activities: [
+      { title: 'Nord & Chefchaouen', description: 'Villes impériales et perle bleue.', images: ['https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900&q=80', 'https://res.cloudinary.com/dc3uvcobc/image/upload/w_900,q_auto,f_auto/v1775672669/a_different_perspective-marrakech-4500910_1280_xwftus.jpg', 'https://images.unsplash.com/photo-1539650116574-75c0c6d91767?w=900&q=80'] },
+      { title: 'Sahara', description: 'Bivouac, 4×4 et dunes.', images: ['https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=900&q=80', 'https://images.unsplash.com/photo-1552663495-7f2b5857f4c1?w=900&q=80', 'https://images.unsplash.com/photo-1444084316824-dc26d6653324?w=900&q=80'] },
+      { title: 'Kasbahs & Marrakech', description: 'Aït Ben Haddou et ville ocre.', images: ['https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=900&q=80', 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=900&q=80', 'https://images.unsplash.com/photo-1528183429752-a97d0e99eee1?w=900&q=80'] },
+      { title: 'Côte atlantique', description: 'Essaouira et Agadir.', images: ['https://images.unsplash.com/photo-1553603227-2358aabe821e?w=900&q=80', 'https://images.unsplash.com/photo-1566127444979-c8e75f83b3ea?w=900&q=80', 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80'] },
+    ],
+  },
+];
+
+export default experiences;

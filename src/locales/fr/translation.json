@@ -1,0 +1,396 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "tours": "Circuits",
+    "destinations": "Destinations",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "bookTour": "Réserver un circuit",
+    "admin": "Admin",
+    "logout": "Déconnexion",
+    "tagline": "Voyages sur mesure au Maroc — depuis 2010"
+  },
+  "footer": {
+    "stayInspired": "Restez inspiré",
+    "stayInspiredDesc": "Notes de voyage marocaines, offres privées et lieux secrets — sélectionnés pour vous.",
+    "emailPlaceholder": "Votre adresse e-mail",
+    "subscribe": "S'abonner",
+    "brandDesc": "Voyages premium au Maroc depuis 2010. Des aventures du Sahara à l'Atlantique — composées avec soin.",
+    "quickLinks": "Liens rapides",
+    "popularTours": "Circuits populaires",
+    "contact": "Contact",
+    "links": {
+      "allTours": "Tous les circuits",
+      "destinations": "Destinations",
+      "blog": "Blog & conseils",
+      "about": "À propos de Sahara Visite",
+      "book": "Réserver un circuit"
+    },
+    "tours": {
+      "imperial": "Grand Circuit des Villes Impériales",
+      "sahara": "Aventure Désert du Sahara",
+      "toubkal": "Randonnée Toubkal",
+      "northern": "Nord du Maroc",
+      "atlantic": "Road Trip Côte Atlantique"
+    },
+    "address": "12 Rue Moulay Ali Cherif, Guéliz, Marrakech 40000, Maroc",
+    "officeHours": "Heures d'ouverture",
+    "weekdays": "Lun–Sam : 9h00 – 18h00 (GMT+1)",
+    "sunday": "Dimanche : 10h00 – 15h00",
+    "allRights": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  },
+  "about": {
+    "hero": {
+      "label": "Notre histoire",
+      "title": "À propos de Sahara Visite"
+    },
+    "story": {
+      "label": "Qui sommes-nous",
+      "title": "Né au Maroc. Fait pour les voyageurs.",
+      "p1": "Sahara Visite a été fondée en 2010 par Youssef El Mansouri, un Marrakchi qui a grandi en regardant des voyageurs tomber amoureux du Maroc – et en voyant des opérateurs peu scrupuleux profiter de leur enthousiasme.",
+      "p2": "Sa vision était simple : créer une agence de voyage dirigée par des Marocains, pour le monde entier, mettant en valeur la beauté authentique du royaume tout en soutenant les communautés locales.",
+      "p3": "Aujourd'hui, Sahara Visite a guidé plus de 8 000 voyageurs de 60+ pays à travers les villes impériales, les dunes sahariennes, le littoral atlantique et le Haut Atlas. Notre équipe de 15 guides certifiés parle 8 langues.",
+      "cta": "Planifiez votre voyage",
+      "founded": "Fondée à Marrakech"
+    },
+    "values": {
+      "label": "Ce qui nous anime",
+      "title": "Nos valeurs",
+      "authentic": { "title": "Expériences authentiques", "desc": "Nous allons au-delà des façades touristiques pour partager le vrai Maroc." },
+      "quality": { "title": "Qualité irréprochable", "desc": "Hébergements, guides et expériences soigneusement sélectionnés." },
+      "responsible": { "title": "Tourisme responsable", "desc": "Nous soutenons les communautés locales et protégeons le patrimoine marocain." },
+      "personalized": { "title": "Service personnalisé", "desc": "Chaque voyage est conçu autour de vos désirs uniques." }
+    },
+    "team": {
+      "label": "Les personnes derrière votre voyage",
+      "title": "Notre équipe",
+      "member1": { "role": "Fondateur & Guide principal", "bio": "Plus de 20 ans d'expérience de guide à travers le Maroc. Parle l'arabe, le berbère, le français et l'anglais." },
+      "member2": { "role": "Responsable des expériences culturelles", "bio": "Spécialiste de l'immersion culturelle authentique, des cours de cuisine et des ateliers artisanaux." },
+      "member3": { "role": "Expert désert & montagne", "bio": "Expert du Sahara et guide certifié du Toubkal. Ses caravanes de chameaux sont légendaires." },
+      "member4": { "role": "Responsable de l'expérience client", "bio": "Veille à ce que chaque voyage Sahara Visite se déroule parfaitement, de la première demande au dernier au revoir." }
+    },
+    "stats": {
+      "years": "Années d'activité",
+      "travellers": "Voyageurs satisfaits",
+      "destinations": "Destinations",
+      "rating": "Note moyenne"
+    }
+  },
+  "tours": {
+    "hero": {
+      "label": "Explorer le Maroc",
+      "title": "Tous les circuits",
+      "available": "{{count}} circuits disponibles"
+    },
+    "search": "Rechercher des circuits...",
+    "filters": "Filtres",
+    "clear": "Effacer",
+    "clearFilters": "Effacer les filtres",
+    "region": "Région",
+    "allRegions": "Toutes les régions",
+    "category": "Catégorie",
+    "allCategories": "Toutes les catégories",
+    "difficulty": "Difficulté",
+    "allLevels": "Tous les niveaux",
+    "minPrice": "Prix minimum",
+    "maxPrice": "Prix maximum",
+    "maxDays": "Jours max",
+    "noResults": "Aucun circuit ne correspond à vos filtres.",
+    "loading": "Chargement des circuits...",
+    "sort": {
+      "recommended": "Recommandé",
+      "priceAsc": "Prix : croissant",
+      "priceDesc": "Prix : décroissant",
+      "durationAsc": "Durée : la plus courte",
+      "durationDesc": "Durée : la plus longue",
+      "rating": "Mieux notés"
+    }
+  },
+  "tourDetail": {
+    "notFound": "Circuit introuvable",
+    "backToTours": "Retour aux circuits",
+    "featured": "À la une",
+    "days": "jours",
+    "reviews": "avis",
+    "perPerson": "par personne",
+    "breadHome": "Accueil",
+    "breadTours": "Circuits",
+    "tabs": {
+      "overview": "Aperçu",
+      "itinerary": "Itinéraire",
+      "includes": "Ce qui est inclus",
+      "reviews": "Avis ({{count}})"
+    },
+    "overview": "Aperçu du circuit",
+    "highlights": "Points forts du circuit",
+    "map": "Carte du circuit",
+    "itinerary": "Itinéraire jour par jour",
+    "day": "Jour {{day}}",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "basedOn": "Basé sur {{count}} avis",
+    "booking": {
+      "duration": "Durée",
+      "groupSize": "Taille du groupe",
+      "languages": "Langues",
+      "region": "Région",
+      "maxPeople": "Max {{count}} personnes",
+      "daysCount": "{{count}} jours"
+    },
+    "bookTour": "Réserver ce circuit",
+    "askQuestion": "Poser une question",
+    "freeCancellation": "Annulation gratuite jusqu'à 30 jours avant",
+    "maxPax": "Max {{count}} pers."
+  },
+  "tourCard": {
+    "featured": "⭐ À la une",
+    "fromPrice": "à partir de ${{price}}",
+    "perPerson": "par personne",
+    "days": "Jours",
+    "availability": "Disponibilité :",
+    "scheduledDepartures": "Départs programmés",
+    "allYear": "Toute l'année",
+    "maxPax": "Max {{count}} pers.",
+    "viewTour": "Voir le circuit"
+  },
+  "contact": {
+    "hero": {
+      "label": "Nous serions ravis de vous entendre",
+      "titleBook": "Réservez votre circuit",
+      "titleContact": "Contact & Réservation"
+    },
+    "booking": {
+      "label": "Réservation :",
+      "perPerson": "/ personne"
+    },
+    "form": {
+      "titleBook": "Finaliser votre réservation",
+      "titleContact": "Envoyez-nous un message",
+      "personalInfo": "Informations personnelles",
+      "firstName": "Prénom *",
+      "lastName": "Nom *",
+      "email": "Adresse e-mail *",
+      "phone": "Numéro de téléphone *",
+      "nationality": "Nationalité",
+      "tripDetails": "Détails du voyage",
+      "tourInterest": "Circuit / Destination souhaité(e) *",
+      "startDate": "Date de départ souhaitée *",
+      "adults": "Adultes *",
+      "children": "Enfants",
+      "specialRequests": "Demandes spéciales ou questions",
+      "specialRequestsPlaceholder": "Régimes alimentaires, besoins de mobilité, occasions spéciales, intérêts particuliers...",
+      "submitBooking": "Soumettre la demande de réservation",
+      "sendMessage": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "disclaimer": "Nous répondrons dans les 24 heures. Aucun paiement requis à ce stade.",
+      "estimatedTotal": "Total estimé :"
+    },
+    "success": {
+      "title": "Réservation reçue !",
+      "text": "Merci ! Votre demande de réservation a été soumise avec succès.",
+      "confirmationLabel": "Votre numéro de confirmation :",
+      "followup": "Nous vous enverrons un e-mail de confirmation et vous contacterons dans les 24 heures.",
+      "explore": "Découvrir d'autres circuits",
+      "another": "Soumettre une autre demande"
+    },
+    "info": {
+      "title": "Informations de contact",
+      "office": "Bureau",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "hours": "Horaires",
+      "whatsapp": "WhatsApp",
+      "whatsappDesc": "Obtenez une réponse rapide sur WhatsApp",
+      "whatsappBtn": "💬 Discuter sur WhatsApp",
+      "mapDesc": "Guéliz, Marrakech – près de Djemaa el-Fna"
+    }
+  },
+  "destinations": {
+    "hero": {
+      "label": "Où irez-vous ?",
+      "title": "Destinations marocaines",
+      "subtitle": "Des anciennes médinas aux dunes infinies"
+    },
+    "search": "Rechercher des destinations...",
+    "regions": {
+      "all": "Toutes",
+      "south": "Sud",
+      "north": "Nord",
+      "atlantic": "Côte Atlantique",
+      "imperial": "Villes impériales"
+    },
+    "loading": "Chargement des destinations...",
+    "noResults": "Aucune destination trouvée.",
+    "count": "{{count}} destinations trouvées"
+  },
+  "destinationDetail": {
+    "notFound": "Destination introuvable",
+    "backTo": "Retour aux destinations",
+    "breadHome": "Accueil",
+    "breadDest": "Destinations",
+    "about": "À propos de {{name}}",
+    "highlights": "Points forts",
+    "attractions": "Incontournables",
+    "location": "Localisation",
+    "whenToVisit": "Quand visiter",
+    "bestTime": "Meilleure période :",
+    "summer": "Été :",
+    "winter": "Hiver :",
+    "practicalTips": "Conseils pratiques",
+    "cta": {
+      "title": "Prêt à visiter {{name}} ?",
+      "desc": "Laissez-nous planifier votre voyage parfait.",
+      "btn": "Obtenir un devis gratuit"
+    },
+    "relatedTours": "Circuits vers {{name}}",
+    "allTours": "Tous les circuits"
+  },
+  "blog": {
+    "hero": {
+      "label": "Inspiration voyage",
+      "title": "Notre blog",
+      "articles": "{{count}} articles publiés"
+    },
+    "search": "Rechercher des articles...",
+    "categories": {
+      "all": "Tous",
+      "tips": "Conseils de voyage",
+      "destinations": "Destinations",
+      "culture": "Culture",
+      "food": "Gastronomie",
+      "adventure": "Aventure",
+      "photography": "Photographie"
+    },
+    "loading": "Chargement des articles...",
+    "noResults": "Aucun article trouvé.",
+    "clearFilters": "Effacer les filtres"
+  },
+  "blogPost": {
+    "notFound": "Article introuvable",
+    "backToBlog": "Retour au blog",
+    "breadHome": "Accueil",
+    "breadBlog": "Blog",
+    "minRead": "min de lecture",
+    "views": "vues",
+    "relatedArticles": "Articles similaires",
+    "cta": {
+      "title": "Prêt pour le Maroc ?",
+      "desc": "Laissez-nous planifier votre voyage parfait.",
+      "btn": "Obtenir un devis gratuit"
+    }
+  },
+  "experienceDetail": {
+    "signatureJourney": "Voyage signature",
+    "backToExp": "Retour aux expériences",
+    "overview": "Aperçu de l'expérience",
+    "overviewSuffix": "Chaque détail est soigné par notre équipe locale pour allier intimité, confort et caractère marocain authentique.",
+    "highlights": "Points forts",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "itinerary": "Exemple d'itinéraire",
+    "day": "Jour {{day}}",
+    "tripDetails": "Détails du voyage",
+    "availability": "Disponibilité :",
+    "from": "Départ :",
+    "to": "Arrivée :",
+    "viewActivities": "Voir les activités",
+    "fromPrice": "À partir de",
+    "perAdult": "par adulte (indicatif)",
+    "reservation": {
+      "title": "Formulaire de réservation",
+      "desc": "Remplissez vos coordonnées et notre équipe vous contactera dans les 24 heures."
+    },
+    "success": {
+      "text": "Demande de réservation reçue.",
+      "confirmation": "Numéro de confirmation :"
+    },
+    "form": {
+      "personalInfo": "Informations personnelles",
+      "tripDetails": "Détails du voyage",
+      "firstNamePlaceholder": "Prénom *",
+      "lastNamePlaceholder": "Nom *",
+      "emailPlaceholder": "E-mail *",
+      "phonePlaceholder": "Téléphone *",
+      "nationalityPlaceholder": "Nationalité",
+      "specialRequestsPlaceholder": "Demandes spéciales : régime alimentaire, mobilité, célébration, etc.",
+      "estimatedTotal": "Total estimé",
+      "submitBtn": "Soumettre la demande de réservation",
+      "submitting": "Envoi en cours..."
+    }
+  },
+  "experienceActivities": {
+    "activities": "Activités",
+    "subtitle": "Des moments soigneusement sélectionnés — guidés, rythmés et coordonnés par notre équipe locale.",
+    "backToTrip": "Retour aux détails du voyage",
+    "noActivities": "Les activités pour ce voyage seront bientôt disponibles.",
+    "photoLabel": "Photo {{n}} sur {{total}} — {{title}}",
+    "cta": {
+      "title": "Prêt à réserver ?",
+      "desc": "Remplissez le formulaire de réservation sur la page du voyage — notre équipe confirmera dans les 24 heures.",
+      "btn": "Continuer vers la réservation"
+    }
+  },
+  "home": {
+    "hero": {
+      "label": "Voyage de luxe sur mesure",
+      "title": "Découvrez le luxe du Maroc",
+      "subtitle": "Des voyages exclusifs conçus pour des expériences inoubliables",
+      "cta": "Explorer les expériences"
+    },
+    "experiences": {
+      "label": "Nos circuits",
+      "title": "Circuits au Maroc",
+      "subtitle": "Choisissez votre forfait — circuit principal 10 jours ou grand voyage 12 jours jusqu'à Agadir.",
+      "mainCircuit": "Circuit principal",
+      "viewCircuit": "Voir le circuit"
+    },
+    "destinations": {
+      "label": "Explorer",
+      "title": "Meilleures destinations",
+      "desc": "Des villes impériales aux ruelles bleues et aux dunes dorées — chaque région révèle une nouvelle facette du Maroc."
+    },
+    "why": {
+      "label": "La différence MorocElite",
+      "title": "Pourquoi nous choisir",
+      "features": {
+        "tailor": { "title": "Voyages sur mesure", "text": "Itinéraires et rythmes personnalisés — conçus autour de votre agenda et de vos passions." },
+        "transport": { "title": "Transport privé", "text": "Véhicules de luxe avec chauffeur et transferts aéroport discrets sur chaque étape." },
+        "accommodation": { "title": "Hébergements de luxe", "text": "Riads, camps dans le désert et hôtels cinq étoiles sélectionnés pour leur service et leur atmosphère." },
+        "guides": { "title": "Guides locaux experts", "text": "Des historiens et conteurs qui ouvrent des portes que les guides de voyage ne mentionnent jamais." }
+      }
+    },
+    "about": {
+      "label": "À propos de MorocElite",
+      "title": "L'art discret du luxe marocain",
+      "p1": "Nous sommes un atelier boutique de voyage — composant des voyages privés pour des hôtes qui valorisent le temps, la beauté et l'exécution parfaite. De la première conversation à votre dernier transfert, un seul concierge gère votre dossier.",
+      "p2": "Nos relations avec les propriétaires de riads, les opérateurs de camps et les guides ont été cultivées au fil des années. Cet accès se traduit par des chambres réservées pour vous, des portes ouvertes au bon moment et des itinéraires qui semblent sans effort."
+    },
+    "testimonials": {
+      "label": "Témoignages",
+      "title": "La confiance de voyageurs exigeants",
+      "reviews": [
+        { "quote": "La meilleure expérience de luxe au Maroc ! Chaque détail était soigné — du riad à notre guide privé dans la médina.", "name": "Alexandra M.", "place": "New York" },
+        { "quote": "Le camp dans le désert dépassait l'imagination. MorocElite a parfaitement compris le niveau de confort que nous souhaitions.", "name": "James & Claire T.", "place": "Londres" },
+        { "quote": "Planification impeccable et discrétion. Nous avons découvert des endroits que nous n'aurions jamais trouvés seuls.", "name": "Sophie L.", "place": "Paris" }
+      ]
+    },
+    "cta": {
+      "title": "Prêt pour votre escapade de luxe ?",
+      "desc": "Partagez vos dates et préférences — notre équipe de concierges vous répondra avec une proposition sur mesure.",
+      "btn": "Réserver votre voyage"
+    }
+  },
+  "eliteNav": {
+    "bookNow": "Réserver",
+    "enquire": "Renseignements",
+    "navigate": "Navigation",
+    "follow": "Suivre",
+    "brandDesc": "Voyages de luxe privés à travers le Maroc. Itinéraires sur mesure, séjours d'exception et service impeccable.",
+    "allRights": "Tous droits réservés.",
+    "designed": "Conçu pour l'art du voyage lent et élégant.",
+    "location": "Marrakech & Casablanca"
+  }
+}
