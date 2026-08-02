@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from '../utils/contact';
+import { CIRCUIT_CATEGORIES } from '../circuits/categories';
 
 const social = [
   { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
@@ -13,7 +14,13 @@ const social = [
 ];
 
 const MorocEliteFooter = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.language || 'fr').slice(0, 2);
+  const categoryLabel = (cat) => {
+    if (lang === 'en') return cat.labelEn;
+    if (lang === 'ar') return cat.labelAr;
+    return cat.labelFr;
+  };
 
   const footerLinks = [
     { labelKey: 'nav.home', to: '/' },
@@ -27,7 +34,7 @@ const MorocEliteFooter = () => {
   return (
     <footer id="contact" className="bg-moroc-black text-white border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           <div className="lg:col-span-1">
             <p className="font-serif text-2xl text-moroc-gold tracking-wide mb-4">Sahara Visite</p>
             <p className="font-moroc text-sm text-white/55 leading-relaxed max-w-xs">
@@ -50,6 +57,19 @@ const MorocEliteFooter = () => {
                   {t('eliteNav.enquire')}
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-moroc-gold mb-6">{t('eliteNav.circuits', { defaultValue: 'Circuits' })}</h3>
+            <ul className="space-y-3">
+              {CIRCUIT_CATEGORIES.map((c) => (
+                <li key={c.id}>
+                  <Link to={`/categories/${c.slug}`} className="font-moroc text-sm text-white/70 hover:text-moroc-gold transition-colors duration-500 ease-premium">
+                    {categoryLabel(c)}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

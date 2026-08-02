@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiFacebook, FiInstagram, FiYoutube, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from '../utils/contact';
+import { CIRCUIT_CATEGORIES } from '../circuits/categories';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.language || 'fr').slice(0, 2);
   const year = new Date().getFullYear();
+
+  const categoryLabel = (cat) => {
+    if (lang === 'en') return cat.labelEn;
+    if (lang === 'ar') return cat.labelAr;
+    return cat.labelFr;
+  };
 
   const quickLinks = [
     { labelKey: 'footer.links.allTours', to: '/tours' },
@@ -14,14 +22,6 @@ const Footer = () => {
     { labelKey: 'footer.links.blog', to: '/blog' },
     { labelKey: 'footer.links.about', to: '/about' },
     { labelKey: 'footer.links.book', to: '/contact' },
-  ];
-
-  const popularTours = [
-    { labelKey: 'footer.tours.imperial', to: '/tours/imperial-cities-grand-tour' },
-    { labelKey: 'footer.tours.sahara', to: '/tours/sahara-desert-kasbahs-adventure' },
-    { labelKey: 'footer.tours.toubkal', to: '/tours/toubkal-trek-berber-villages' },
-    { labelKey: 'footer.tours.northern', to: '/tours/northern-morocco-discovery' },
-    { labelKey: 'footer.tours.atlantic', to: '/tours/atlantic-coast-road-trip' },
   ];
 
   return (
@@ -109,20 +109,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Popular Tours */}
+          {/* Circuit categories */}
           <div>
             <h4 className="font-semibold text-gold-400 mb-5 uppercase text-xs tracking-[0.2em]">
-              {t('footer.popularTours')}
+              {t('footer.categories')}
             </h4>
             <ul className="space-y-3.5">
-              {popularTours.map(({ labelKey, to }) => (
-                <li key={to}>
+              {CIRCUIT_CATEGORIES.map((cat) => (
+                <li key={cat.id}>
                   <Link
-                    to={to}
+                    to={`/categories/${cat.slug}`}
                     className="text-primary-200 hover:text-gold-400 text-sm transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <span className="w-1 h-1 bg-gold-500 rounded-full group-hover:w-2 transition-all duration-300" />
-                    {t(labelKey)}
+                    {categoryLabel(cat)}
                   </Link>
                 </li>
               ))}
@@ -150,7 +150,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@royalsaharatours.ma"
+                  href="mailto:saharavisite@gmail.com"
                   className="flex items-center gap-3 text-sm text-primary-200 hover:text-gold-400 transition-colors duration-300"
                 >
                   <FiMail className="text-gold-400 flex-shrink-0" size={16} />

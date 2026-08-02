@@ -1,14 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import MorocEliteHero from '../morocelite/MorocEliteHero';
 import FeaturedExperiences from '../morocelite/FeaturedExperiences';
-import MorocEliteAbout from '../morocelite/MorocEliteAbout';
-import WhyChooseUs from '../morocelite/WhyChooseUs';
+import CustomTravel from '../morocelite/CustomTravel';
 import TopDestinations from '../morocelite/TopDestinations';
 import Testimonials from '../morocelite/Testimonials';
 import MorocEliteCTA from '../morocelite/MorocEliteCTA';
-import MorocEliteFooter from '../morocelite/MorocEliteFooter';
 
 const MorocEliteHome = () => (
   <div className="min-h-screen bg-moroc-black font-moroc text-moroc-black antialiased">
@@ -23,13 +22,12 @@ const MorocEliteHome = () => (
     <main>
       <MorocEliteHero />
       <FeaturedExperiences />
-      <MorocEliteAbout />
-      <WhyChooseUs />
+      <CustomTravel />
       <TopDestinations />
       <Testimonials />
       <MorocEliteCTA />
     </main>
-    <MorocEliteFooter />
+    <Footer />
   </div>
 );
 

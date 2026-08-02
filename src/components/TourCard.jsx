@@ -1,83 +1,100 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FiClock, FiUsers, FiStar, FiMapPin, FiCalendar, FiArrowRight } from 'react-icons/fi';
+import { FiClock, FiCalendar, FiMapPin } from 'react-icons/fi';
 
-const difficultyColor = {
-  Easy: 'bg-green-100 text-green-700',
-  Moderate: 'bg-amber-100 text-amber-700',
-  Challenging: 'bg-red-100 text-red-700',
-};
-
-const TourCard = ({ tour }) => {
+/**
+ * Unified circuit card — same visual language as the homepage FeaturedExperiences.
+ * Used on /tours, category hubs, home, and related-circuit grids.
+ */
+const TourCard = ({ tour, featuredLabel = false }) => {
   const { t } = useTranslation();
   const {
-    title, slug, shortDescription, price, discountPrice,
-    duration, groupSize, rating, ratingsCount, region,
-    coverImage, difficulty, category, featured, startDates, destinations,
+    title,
+    slug,
+    href,
+    shortDescription,
+    duration,
+    durationLabel,
+    coverImage,
+    availability,
+    fromLocation,
+    toLocation,
+    region,
+    destinations,
+    startDates,
   } = tour;
 
-  const availabilityLabel = startDates?.length ? t('tourCard.scheduledDepartures') : t('tourCard.allYear');
-  const fromLocation = destinations?.[0]?.name || region;
-  const toLocation = destinations?.length > 1 ? destinations[destinations.length - 1]?.name : region;
+  const detailPath = href || `/circuits/${slug}`;
+  const durationText =
+    durationLabel || (duration != null && typeof duration === 'number' ? `${duration} ${t('tourCard.days')}` : duration) || '';
+  const availabilityLabel =
+    availability ||
+    (startDates?.length ? t('tourCard.scheduledDepartures') : t('tourCard.allYear'));
+  const from = fromLocation || destinations?.[0]?.name || '';
+  const to =
+    toLocation ||
+    (destinations?.length > 1 ? destinations[destinations.length - 1]?.name : from) ||
+    '';
+  const routeLabel = from && to ? `${from} → ${to}` : region || from || to;
 
   return (
-    <article className="card group flex flex-col h-full">
-      <div className="relative overflow-hidden aspect-[4/3]">
+    <article className="group bg-moroc-white border border-moroc-black/[0.06] rounded-sm overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-500 ease-premium hover:-translate-y-2 flex flex-col h-full">
+      <Link to={detailPath} className="block relative aspect-[4/5] overflow-hidden bg-[#EDE8E0]">
         <img
-          src={coverImage || 'https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=600'}
+          src={coverImage || 'https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=800'}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.04]"
           loading="lazy"
+          decoding="async"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-          {featured && <span className="badge bg-gold-500 text-white">{t('tourCard.featured')}</span>}
-          <span className={`badge ${difficultyColor[difficulty]}`}>{difficulty}</span>
-        </div>
-        <div className="absolute bottom-3 right-3 bg-white/95 backdrop-blur-sm rounded-xl px-3 py-1.5 text-right shadow-md">
-          {discountPrice ? (
-            <>
-              <div className="text-xs text-gray-400 line-through">${price}</div>
-              <div className="text-primary-700 font-bold text-lg leading-tight">${discountPrice}</div>
-            </>
-          ) : (
-            <div className="text-primary-700 font-bold text-lg leading-tight">
-              {t('tourCard.fromPrice', { price })}
+        <div className="absolute inset-0 bg-moroc-black/0 group-hover:bg-moroc-black/20 transition-colors duration-500" />
+        {featuredLabel && (
+          <span className="absolute top-3 left-3 bg-moroc-gold text-moroc-black text-[10px] font-bold tracking-widest uppercase px-2.5 py-1">
+            {t('home.experiences.mainCircuit')}
+          </span>
+        )}
+        {durationText && (
+          <span className="absolute top-3 right-3 bg-moroc-black/70 text-white text-[10px] font-semibold tracking-wide uppercase px-2.5 py-1 backdrop-blur-sm">
+            {durationText}
+          </span>
+        )}
+      </Link>
+
+      <div className="p-7 md:p-8 flex flex-col flex-1">
+        <h3 className="font-serif text-xl text-moroc-black mb-3 group-hover:text-moroc-gold transition-colors duration-500 ease-premium leading-snug">
+          <Link to={detailPath}>{title}</Link>
+        </h3>
+        {shortDescription && (
+          <p className="font-moroc text-sm text-moroc-black/55 leading-relaxed mb-6 line-clamp-3">
+            {shortDescription}
+          </p>
+        )}
+
+        <div className="space-y-2 mb-6 mt-auto">
+          {durationText && (
+            <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
+              <FiClock className="text-moroc-gold shrink-0" size={13} />
+              <span>{durationText}</span>
             </div>
           )}
-          <div className="text-gray-400 text-[10px]">{t('tourCard.perPerson')}</div>
-        </div>
-      </div>
-
-      <div className="p-5 flex flex-col flex-1">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-gold-500 text-xs font-semibold uppercase tracking-wider">{category}</span>
-          <span className="flex items-center gap-1 text-xs text-gray-500"><FiMapPin size={11} />{region}</span>
-        </div>
-        <h3 className="font-serif text-lg text-primary-700 font-semibold mb-2 group-hover:text-gold-500 transition-colors leading-snug">
-          <Link to={`/tours/${slug}`}>{title}</Link>
-        </h3>
-        <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1 line-clamp-2">{shortDescription}</p>
-
-        <div className="space-y-2.5 text-sm text-gray-600 border-t border-gray-100 pt-4 mb-4">
-          <div className="flex items-center gap-2"><FiClock className="text-gold-500" size={14} /><span>{duration} {t('tourCard.days')}</span></div>
-          <div className="flex items-center gap-2"><FiCalendar className="text-gold-500" size={14} /><span>{t('tourCard.availability')} {availabilityLabel}</span></div>
-          <div className="flex items-center gap-2"><FiMapPin className="text-gold-500" size={14} /><span>{fromLocation}</span></div>
-          <div className="flex items-center gap-2"><FiMapPin className="text-gold-500" size={14} /><span>{toLocation}</span></div>
+          <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
+            <FiCalendar className="text-moroc-gold shrink-0" size={13} />
+            <span>{availabilityLabel}</span>
+          </div>
+          {routeLabel && (
+            <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
+              <FiMapPin className="text-moroc-gold shrink-0" size={13} />
+              <span>{routeLabel}</span>
+            </div>
+          )}
         </div>
 
-        <div className="flex items-center justify-between text-xs text-gray-500 border-t border-gray-100 pt-3 mb-4">
-          <span className="flex items-center gap-1"><FiUsers className="text-gold-400" size={14} />{t('tourCard.maxPax', { count: groupSize })}</span>
-          <span className="flex items-center gap-1">
-            <FiStar className="text-gold-400 fill-current" size={14} />
-            {rating.toFixed(1)}
-            <span className="text-gray-400">({ratingsCount})</span>
-          </span>
-        </div>
-
-        <Link to={`/tours/${slug}`} className="btn-primary w-full justify-center text-sm">
-          {t('tourCard.viewTour')} <FiArrowRight size={16} />
+        <Link
+          to={detailPath}
+          className="text-xs font-semibold tracking-widest uppercase text-moroc-gold border-b border-moroc-gold pb-0.5 self-start hover:text-moroc-black hover:border-moroc-black transition-colors duration-500 ease-premium"
+        >
+          {t('home.experiences.viewCircuit')}
         </Link>
       </div>
     </article>

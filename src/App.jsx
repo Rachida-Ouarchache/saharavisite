@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { CurrencyProvider } from './context/CurrencyContext';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -15,6 +16,8 @@ const Tours = lazy(() => import('./pages/Tours'));
 const TourDetail = lazy(() => import('./pages/TourDetail'));
 const ExperienceDetail = lazy(() => import('./pages/ExperienceDetail'));
 const ExperienceActivities = lazy(() => import('./pages/ExperienceActivities'));
+const CircuitDetail = lazy(() => import('./pages/CircuitDetail'));
+const CircuitCategory = lazy(() => import('./pages/CircuitCategory'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -38,6 +41,9 @@ const AppRoutes = () => (
       <Route path="/experiences/coastal-riviera-retreat" element={<Navigate to="/experiences/villes-imperiales-desert-10-jours" replace />} />
       <Route path="/experiences/:slug/activities" element={<ExperienceActivities />} />
       <Route path="/experiences/:slug" element={<ExperienceDetail />} />
+      <Route path="/circuits" element={<Navigate to="/tours" replace />} />
+      <Route path="/circuits/:slug" element={<CircuitDetail />} />
+      <Route path="/categories/:slug" element={<CircuitCategory />} />
       <Route path="/tripnexa" element={<Navigate to="/" replace />} />
       <Route element={<Layout />}>
         <Route path="about" element={<About />} />
@@ -80,10 +86,12 @@ const RTLManager = () => {
 const App = () => (
   <Router>
     <AuthProvider>
-      <RTLManager />
-      <ScrollToTop />
-      <FloatingWhatsApp />
-      <AppRoutes />
+      <CurrencyProvider>
+        <RTLManager />
+        <ScrollToTop />
+        <FloatingWhatsApp />
+        <AppRoutes />
+      </CurrencyProvider>
     </AuthProvider>
   </Router>
 );

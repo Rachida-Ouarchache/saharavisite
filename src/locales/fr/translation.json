@@ -19,6 +19,7 @@
     "brandDesc": "Voyages premium au Maroc depuis 2010. Des aventures du Sahara à l'Atlantique — composées avec soin.",
     "quickLinks": "Liens rapides",
     "popularTours": "Circuits populaires",
+    "categories": "Catégories",
     "contact": "Contact",
     "links": {
       "allTours": "Tous les circuits",
@@ -98,6 +99,12 @@
     "minPrice": "Prix minimum",
     "maxPrice": "Prix maximum",
     "maxDays": "Jours max",
+    "exploreByCategory": "Explorer par catégorie",
+    "departureCity": "Ville de départ",
+    "allCities": "Toutes les villes",
+    "days": "Nombre de jours",
+    "allDurations": "Toutes les durées",
+    "themes": "Thèmes",
     "noResults": "Aucun circuit ne correspond à vos filtres.",
     "loading": "Chargement des circuits...",
     "sort": {
@@ -147,7 +154,7 @@
   },
   "tourCard": {
     "featured": "⭐ À la une",
-    "fromPrice": "à partir de ${{price}}",
+    "fromPrice": "à partir de €{{price}}",
     "perPerson": "par personne",
     "days": "Jours",
     "availability": "Disponibilité :",
@@ -343,14 +350,37 @@
     "experiences": {
       "label": "Nos circuits",
       "title": "Circuits au Maroc",
-      "subtitle": "Choisissez votre forfait — circuit principal 10 jours ou grand voyage 12 jours jusqu'à Agadir.",
+      "subtitle": "Désert, villes impériales, Chefchaouen et Essaouira — quatre circuits phares pour découvrir le Maroc.",
       "mainCircuit": "Circuit principal",
-      "viewCircuit": "Voir le circuit"
+      "viewCircuit": "Voir le circuit",
+      "viewAll": "Voir tous les circuits"
     },
     "destinations": {
       "label": "Explorer",
-      "title": "Meilleures destinations",
-      "desc": "Des villes impériales aux ruelles bleues et aux dunes dorées — chaque région révèle une nouvelle facette du Maroc."
+      "title": "Découvrez les plus beaux circuits du Maroc",
+      "desc": "Explorez le Maroc à travers nos circuits soigneusement conçus. Du désert de Merzouga aux villes impériales, des montagnes de l'Atlas aux plages de l'Atlantique, vivez des expériences authentiques avec Sahara Visite.",
+      "cards": {
+        "marrakechMerzouga": {
+          "name": "Marrakech → Merzouga",
+          "description": "Circuit de 3 jours à travers les montagnes de l'Atlas, Aït Ben Haddou et les dunes de Merzouga.",
+          "alt": "Circuit Marrakech Merzouga 3 jours - Sahara Visite"
+        },
+        "fesMerzouga": {
+          "name": "Fès → Désert de Merzouga",
+          "description": "Découvrez Ifrane, la vallée du Ziz et passez une nuit magique dans le désert du Sahara.",
+          "alt": "Circuit Fès Merzouga - Sahara Visite"
+        },
+        "chefchaouenAkchour": {
+          "name": "Chefchaouen & Akchour",
+          "description": "Explorez la ville bleue et les cascades d'Akchour lors d'une excursion nature.",
+          "alt": "Excursion Chefchaouen Akchour - Sahara Visite"
+        },
+        "villesImperiales": {
+          "name": "Circuit des villes impériales",
+          "description": "Casablanca, Rabat, Meknès, Fès et Marrakech dans un voyage culturel inoubliable.",
+          "alt": "Circuit Villes Impériales du Maroc - Sahara Visite"
+        }
+      }
     },
     "why": {
       "label": "La différence MorocElite",
@@ -367,6 +397,54 @@
       "title": "L'art discret du luxe marocain",
       "p1": "Nous sommes un atelier boutique de voyage — composant des voyages privés pour des hôtes qui valorisent le temps, la beauté et l'exécution parfaite. De la première conversation à votre dernier transfert, un seul concierge gère votre dossier.",
       "p2": "Nos relations avec les propriétaires de riads, les opérateurs de camps et les guides ont été cultivées au fil des années. Cet accès se traduit par des chambres réservées pour vous, des portes ouvertes au bon moment et des itinéraires qui semblent sans effort."
+    },
+    "customTravel": {
+      "label": "Votre voyage, vos envies",
+      "imageAlt": "Voyage sur mesure au Maroc — désert du Sahara et paysages marocains, Sahara Visite",
+      "title": "Créez votre voyage sur mesure au Maroc",
+      "description": "Chez Sahara Visite, chaque voyage est conçu spécialement pour vous. Que vous rêviez d'une aventure dans le désert du Sahara, d'un circuit à travers les villes impériales, d'une escapade dans les montagnes de l'Atlas ou d'un séjour en bord de mer, nous créons un itinéraire entièrement personnalisé selon votre budget, la durée de votre séjour et vos envies.",
+      "howItWorks": "Comment ça fonctionne ?",
+      "stepsAriaLabel": "Les quatre étapes pour créer votre voyage sur mesure au Maroc",
+      "stepLabel": "Étape {{number}}",
+      "steps": [
+        {
+          "title": "Choisissez vos envies",
+          "text": "Indiquez vos destinations, activités et centres d'intérêt."
+        },
+        {
+          "title": "Nous créons votre itinéraire",
+          "text": "Nos experts conçoivent un voyage unique adapté à votre budget et à votre calendrier."
+        },
+        {
+          "title": "Validez votre programme",
+          "text": "Recevez votre proposition personnalisée et modifiez-la si nécessaire."
+        },
+        {
+          "title": "Profitez de votre voyage",
+          "text": "Voyagez en toute sérénité avec une assistance avant et pendant votre séjour."
+        }
+      ],
+      "whyChoose": "Pourquoi choisir Sahara Visite ?",
+      "benefitsAriaLabel": "Avantages de notre agence de voyage au Maroc",
+      "benefits": [
+        "Voyage 100 % personnalisé",
+        "Guides locaux expérimentés",
+        "Assistance avant et pendant le voyage",
+        "Hébergements soigneusement sélectionnés",
+        "Véhicules confortables",
+        "Tarifs transparents",
+        "Circuits privés ou en groupe",
+        "Réponse rapide sous 24 heures"
+      ],
+      "cta": {
+        "sectionTitle": "Demandez votre devis personnalisé",
+        "title": "Votre voyage commence ici.",
+        "desc": "Parlez-nous de votre projet et recevez gratuitement un itinéraire personnalisé ainsi qu'un devis sans engagement.",
+        "createTrip": "Créer mon voyage",
+        "quote": "Demander un devis",
+        "createTripAria": "Créer mon voyage sur mesure au Maroc avec Sahara Visite",
+        "quoteAria": "Demander un devis gratuit pour votre voyage personnalisé au Maroc"
+      }
     },
     "testimonials": {
       "label": "Témoignages",
@@ -387,10 +465,85 @@
     "bookNow": "Réserver",
     "enquire": "Renseignements",
     "navigate": "Navigation",
+    "circuits": "Circuits",
+    "contact": "Contact",
     "follow": "Suivre",
     "brandDesc": "Voyages de luxe privés à travers le Maroc. Itinéraires sur mesure, séjours d'exception et service impeccable.",
     "allRights": "Tous droits réservés.",
     "designed": "Conçu pour l'art du voyage lent et élégant.",
     "location": "Marrakech & Casablanca"
+  },
+  "circuitsPage": {
+    "home": "Accueil",
+    "breadcrumb": "Circuits du Maroc",
+    "label": "Sahara Visite",
+    "title": "Circuits du Maroc",
+    "subtitle": "Désert, villes impériales, Atlas, Nord, côte Atlantique et excursions — circuits privés conçus pour Google et les voyageurs exigeants.",
+    "seoTitle": "Circuits du Maroc – Désert & Impériales",
+    "seoDescription": "Découvrez tous les circuits Maroc Sahara Visite : Merzouga, Fès, Chefchaouen, Atlas, Essaouira. Morocco Tours, Private Morocco Tour & excursions.",
+    "heroAlt": "Dunes du Sahara marocain au coucher du soleil – circuits Sahara Visite",
+    "categories": "Catégories de circuits",
+    "all": "Tous",
+    "count": "{{count}} circuits disponibles",
+    "viewCircuit": "Voir le circuit",
+    "overview": "Aperçu du circuit",
+    "guide": "Guide complet du voyage",
+    "highlights": "Points forts",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "itinerary": "Programme jour par jour",
+    "day": "Jour {{day}}",
+    "practical": "Informations pratiques",
+    "tips": "Conseils de voyage",
+    "faq": "Questions fréquentes",
+    "faqIntro": "Réponses claires pour préparer votre voyage Maroc avec Sahara Visite.",
+    "similar": "Circuits similaires",
+    "tripDetails": "Détails du voyage",
+    "availability": "Disponibilité :",
+    "from": "Départ :",
+    "to": "Arrivée :",
+    "fromPrice": "À partir de",
+    "perAdult": "par adulte (indicatif)",
+    "bookCta": "Réserver",
+    "quoteCta": "Demander un devis",
+    "quickAnswer": "Réponse rapide",
+    "destinations": "Destinations",
+    "blog": "Articles du blog",
+    "errorSubmit": "Échec de l'envoi. Veuillez réessayer.",
+    "sections": {
+      "intro": "Introduction",
+      "gallery": "Galerie",
+      "whyChoose": "Pourquoi choisir ce circuit",
+      "map": "Carte de l'itinéraire",
+      "placesVisited": "Les lieux visités",
+      "whenToGo": "Quand partir",
+      "conclusion": "Conclusion",
+      "reviews": "Avis clients",
+      "nearbyExcursions": "Excursions à proximité",
+      "closeGallery": "Fermer la galerie"
+    },
+    "reservation": {
+      "title": "Réserver ce circuit",
+      "desc": "Remplissez le formulaire — Sahara Visite vous répond sous 24 h avec un devis personnalisé."
+    },
+    "success": {
+      "text": "Demande de réservation reçue.",
+      "confirmation": "Numéro de confirmation :"
+    },
+    "form": {
+      "personalInfo": "Informations personnelles",
+      "tripDetails": "Détails du voyage",
+      "firstNamePlaceholder": "Prénom *",
+      "lastNamePlaceholder": "Nom *",
+      "emailPlaceholder": "E-mail *",
+      "phonePlaceholder": "Téléphone *",
+      "nationalityPlaceholder": "Nationalité",
+      "specialRequestsPlaceholder": "Demandes spéciales : régime, mobilité, célébration…",
+      "estimatedTotal": "Total estimé",
+      "adults": "adultes",
+      "children": "enfants",
+      "submitBtn": "Envoyer la demande",
+      "submitting": "Envoi en cours..."
+    }
   }
 }

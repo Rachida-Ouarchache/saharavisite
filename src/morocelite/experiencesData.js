@@ -2,7 +2,7 @@ const experiences = [
   {
     slug: 'villes-imperiales-desert-10-jours',
     featured: true,
-    title: 'Villes impériales & désert — 10 jours',
+    title: 'Des Palais aux Dunes d\'Or',
     description:
       'Le classique du Maroc en 10 jours : Casablanca, Rabat, Meknès, Volubilis, Fès, Sahara, bivouac de luxe, Todra, kasbahs et Marrakech — pension complète.',
     duration: '10 jours / 8 nuits',
@@ -48,7 +48,7 @@ const experiences = [
   },
   {
     slug: 'grand-circuit-maroc-12-jours',
-    title: 'Grand circuit du Maroc — 12 jours',
+    title: 'Du Rif aux Plages d\'Agadir',
     description:
       'Casablanca à Agadir : Chefchaouen, Fès, Sahara, kasbahs, Marrakech, Essaouira et séjour tout inclus Iberostar.',
     duration: '12 jours',

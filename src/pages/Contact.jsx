@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiCheck, FiPhone, FiMail, FiMapPin, FiClock, FiUser, FiCalendar } from 'react-icons/fi';
 import { bookingsAPI, toursAPI } from '../utils/api';
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL, SITE_PHONE_WA } from '../utils/contact';
+import { getCountries } from '../utils/countries';
 import SEO from '../components/SEO';
 
 const initialForm = {
@@ -12,7 +13,7 @@ const initialForm = {
 };
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [searchParams] = useSearchParams();
   const tourSlug = searchParams.get('tour');
   const [form, setForm] = useState({ ...initialForm });
@@ -20,6 +21,7 @@ const Contact = () => {
   const [success, setSuccess] = useState(null);
   const [error, setError] = useState('');
   const [tourData, setTourData] = useState(null);
+  const countries = useMemo(() => getCountries(i18n.language), [i18n.language]);
 
   useEffect(() => {
     if (tourSlug) {
@@ -142,7 +144,20 @@ const Contact = () => {
                         </div>
                         <div>
                           <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.nationality')}</label>
-                          <input type="text" name="nationality" value={form.nationality} onChange={handleChange} className="input-field" placeholder="French" />
+                          <select
+                            name="nationality"
+                            value={form.nationality}
+                            onChange={handleChange}
+                            className="input-field"
+                            aria-label={t('contact.form.nationality')}
+                          >
+                            <option value="">{t('contact.form.nationality')}</option>
+                            {countries.map(({ code, name }) => (
+                              <option key={code} value={name}>
+                                {name}
+                              </option>
+                            ))}
+                          </select>
                         </div>
                       </div>
                     </div>

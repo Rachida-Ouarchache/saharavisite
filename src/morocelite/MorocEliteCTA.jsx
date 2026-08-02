@@ -6,7 +6,7 @@ const MorocEliteCTA = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative py-28 md:py-36 bg-moroc-black overflow-hidden">
+    <section className="relative py-24 md:py-32 bg-moroc-black overflow-hidden">
       <div
         className="absolute inset-0 opacity-30 bg-cover bg-center"
         style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=2000&q=80)' }}
@@ -14,7 +14,7 @@ const MorocEliteCTA = () => {
       />
       <div className="absolute inset-0 bg-moroc-black/88" aria-hidden />
       <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-moroc-white font-medium mb-8 leading-tight">
+        <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-moroc-white font-medium tracking-tight mb-8 leading-tight">
           {t('home.cta.title')}
         </h2>
         <p className="font-moroc text-white/65 text-sm md:text-base mb-10 max-w-xl mx-auto leading-relaxed">

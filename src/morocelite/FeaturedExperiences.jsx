@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FiCalendar, FiClock, FiMapPin } from 'react-icons/fi';
 import Reveal from '../components/Reveal';
-import { useLocalizedExperiences } from './useLocalizedExperiences';
+import TourCard from '../components/TourCard';
+import { useLocalizedCircuits } from '../circuits/useLocalizedCircuit';
+import { circuitToTourCard } from '../circuits/toTourCard';
+
+const HOME_FEATURED_SLUGS = [
+  'marrakech-merzouga-3-jours',
+  'casablanca-rabat-meknes-fes-marrakech',
+  'circuit-chefchaouen',
+  'circuit-essaouira',
+];
 
 const FeaturedExperiences = () => {
   const { t } = useTranslation();
-  const experiences = useLocalizedExperiences();
+  const allCircuits = useLocalizedCircuits();
+
+  const experiences = useMemo(() => {
+    const bySlug = Object.fromEntries(allCircuits.map((c) => [c.slug, c]));
+    const picked = HOME_FEATURED_SLUGS.map((slug) => bySlug[slug]).filter(Boolean);
+    if (picked.length >= 4) return picked.slice(0, 4);
+    const featured = allCircuits.filter((c) => c.featured);
+    const rest = allCircuits.filter((c) => !picked.some((p) => p.slug === c.slug));
+    return [...picked, ...featured, ...rest].slice(0, 4);
+  }, [allCircuits]);
+
+  const cards = useMemo(() => experiences.map(circuitToTourCard), [experiences]);
 
   return (
     <section id="experiences" className="bg-moroc-white py-24 md:py-32">
@@ -22,43 +41,19 @@ const FeaturedExperiences = () => {
           </p>
         </Reveal>
 
-        <Reveal delayMs={80} className="grid sm:grid-cols-2 gap-8 md:gap-10 max-w-5xl mx-auto">
-          {experiences.map((item, index) => (
-            <article key={item.slug} className="group bg-moroc-white border border-moroc-black/[0.06] rounded-sm overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-500 ease-premium hover:-translate-y-2">
-              <div className="relative aspect-[4/5] overflow-hidden bg-[#EDE8E0]">
-                <img src={item.image} alt={item.title} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.04]" />
-                <div className="absolute inset-0 bg-moroc-black/0 group-hover:bg-moroc-black/20 transition-colors duration-500" />
-                {index === 0 && (
-                  <span className="absolute top-3 left-3 bg-moroc-gold text-moroc-black text-[10px] font-bold tracking-widest uppercase px-2.5 py-1">
-                    {t('home.experiences.mainCircuit')}
-                  </span>
-                )}
-                <span className="absolute top-3 right-3 bg-moroc-black/70 text-white text-[10px] font-semibold tracking-wide uppercase px-2.5 py-1 backdrop-blur-sm">
-                  {item.duration}
-                </span>
-              </div>
-              <div className="p-7 md:p-8">
-                <h3 className="font-serif text-xl text-moroc-black mb-3 group-hover:text-moroc-gold transition-colors duration-500 ease-premium leading-snug">
-                  {item.title}
-                </h3>
-                <p className="font-moroc text-sm text-moroc-black/55 leading-relaxed mb-6 line-clamp-3">{item.description}</p>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
-                    <FiClock className="text-moroc-gold shrink-0" size={13} /><span>{item.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
-                    <FiCalendar className="text-moroc-gold shrink-0" size={13} /><span>{item.availability}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-xs font-moroc text-moroc-black/65">
-                    <FiMapPin className="text-moroc-gold shrink-0" size={13} /><span>{item.from} → {item.to}</span>
-                  </div>
-                </div>
-                <Link to={`/experiences/${item.slug}`} className="text-xs font-semibold tracking-widest uppercase text-moroc-gold border-b border-moroc-gold pb-0.5 hover:text-moroc-black hover:border-moroc-black transition-colors duration-500 ease-premium">
-                  {t('home.experiences.viewCircuit')}
-                </Link>
-              </div>
-            </article>
+        <Reveal delayMs={80} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+          {cards.map((tour, index) => (
+            <TourCard key={tour.slug} tour={tour} featuredLabel={index === 0} />
           ))}
+        </Reveal>
+
+        <Reveal delayMs={120} className="text-center mt-12 md:mt-16">
+          <Link
+            to="/tours"
+            className="inline-flex items-center justify-center min-h-11 px-6 py-2.5 text-sm font-semibold tracking-[0.12em] uppercase text-moroc-black bg-moroc-gold border border-moroc-gold transition-all duration-500 ease-premium hover:bg-moroc-gold-hover hover:-translate-y-0.5"
+          >
+            {t('home.experiences.viewAll', { defaultValue: 'Voir tous les circuits' })}
+          </Link>
         </Reveal>
       </div>
     </section>

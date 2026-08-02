@@ -58,8 +58,8 @@ const Navbar = () => {
               <FiPhone size={12} />
               {SITE_PHONE_DISPLAY}
             </a>
-            <a href="mailto:info@royalsaharatours.ma" className="hover:text-moroc-gold transition-colors duration-300">
-              info@royalsaharatours.ma
+            <a href="mailto:saharavisite@gmail.com" className="hover:text-moroc-gold transition-colors duration-300">
+              saharavisite@gmail.com
             </a>
           </div>
         </div>

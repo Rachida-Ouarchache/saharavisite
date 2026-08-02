@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiArrowLeft, FiCalendar, FiCheck, FiClock, FiCompass, FiMapPin, FiUser } from 'react-icons/fi';
@@ -7,11 +7,13 @@ import MorocEliteNavbar from '../morocelite/MorocEliteNavbar';
 import MorocEliteFooter from '../morocelite/MorocEliteFooter';
 import { useLocalizedExperience } from '../morocelite/useLocalizedExperiences';
 import { bookingsAPI } from '../utils/api';
+import { getCountries } from '../utils/countries';
 
 const ExperienceDetail = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { slug } = useParams();
   const experience = useLocalizedExperience(slug);
+  const countries = useMemo(() => getCountries(i18n.language), [i18n.language]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(null);
@@ -171,7 +173,20 @@ const ExperienceDetail = () => {
                       <input name="lastName" value={form.lastName} onChange={handleChange} required placeholder={t('experienceDetail.form.lastNamePlaceholder')} className="input-field" />
                       <input type="email" name="email" value={form.email} onChange={handleChange} required placeholder={t('experienceDetail.form.emailPlaceholder')} className="input-field" />
                       <input name="phone" value={form.phone} onChange={handleChange} required placeholder={t('experienceDetail.form.phonePlaceholder')} className="input-field" />
-                      <input name="nationality" value={form.nationality} onChange={handleChange} placeholder={t('experienceDetail.form.nationalityPlaceholder')} className="input-field sm:col-span-2" />
+                      <select
+                        name="nationality"
+                        value={form.nationality}
+                        onChange={handleChange}
+                        className="input-field sm:col-span-2"
+                        aria-label={t('experienceDetail.form.nationalityPlaceholder')}
+                      >
+                        <option value="">{t('experienceDetail.form.nationalityPlaceholder')}</option>
+                        {countries.map(({ code, name }) => (
+                          <option key={code} value={name}>
+                            {name}
+                          </option>
+                        ))}
+                      </select>
                     </div>
                   </div>
 

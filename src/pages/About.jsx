@@ -4,13 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { FiArrowRight, FiCheck, FiAward, FiHeart, FiStar } from 'react-icons/fi';
 import SEO from '../components/SEO';
 
-const team = [
-  { name: 'Youssef El Mansouri', memberKey: 'member1', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300' },
-  { name: 'Aicha Benali', memberKey: 'member2', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300' },
-  { name: 'Mohammed Zaki', memberKey: 'member3', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300' },
-  { name: 'Leila Tahiri', memberKey: 'member4', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300' },
-];
-
 const About = () => {
   const { t } = useTranslation();
 
@@ -90,28 +83,6 @@ const About = () => {
                 </div>
                 <h3 className="font-semibold text-primary-700 mb-2">{t(titleKey)}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{t(descKey)}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <p className="section-subtitle mb-3">{t('about.team.label')}</p>
-            <h2 className="section-title">{t('about.team.title')}</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map(({ name, memberKey, image }) => (
-              <div key={name} className="text-center group">
-                <div className="relative mb-4 mx-auto w-36 h-36 rounded-full overflow-hidden shadow-card group-hover:shadow-card-hover transition-all">
-                  <img src={image} alt={name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                </div>
-                <h3 className="font-semibold text-primary-700 mb-1">{name}</h3>
-                <p className="text-gold-500 text-sm font-medium mb-2">{t(`about.team.${memberKey}.role`)}</p>
-                <p className="text-gray-500 text-sm leading-relaxed">{t(`about.team.${memberKey}.bio`)}</p>
               </div>
             ))}
           </div>

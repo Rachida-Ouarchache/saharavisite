@@ -19,6 +19,7 @@
     "brandDesc": "Premium Moroccan travel since 2010. Journeys from the Sahara to the Atlantic — composed with care.",
     "quickLinks": "Quick links",
     "popularTours": "Popular tours",
+    "categories": "Categories",
     "contact": "Contact",
     "links": {
       "allTours": "All tours",
@@ -98,6 +99,12 @@
     "minPrice": "Min Price",
     "maxPrice": "Max Price",
     "maxDays": "Max Days",
+    "exploreByCategory": "Explore by Category",
+    "departureCity": "Departure City",
+    "allCities": "All Cities",
+    "days": "Number of Days",
+    "allDurations": "All Durations",
+    "themes": "Themes",
     "noResults": "No tours match your filters.",
     "loading": "Loading tours...",
     "sort": {
@@ -343,14 +350,37 @@
     "experiences": {
       "label": "Our circuits",
       "title": "Morocco Tours",
-      "subtitle": "Choose your package — main 10-day circuit or grand 12-day journey to Agadir.",
+      "subtitle": "Desert, imperial cities, Chefchaouen and Essaouira — four flagship tours to discover Morocco.",
       "mainCircuit": "Main circuit",
-      "viewCircuit": "View circuit"
+      "viewCircuit": "View circuit",
+      "viewAll": "View all tours"
     },
     "destinations": {
       "label": "Explore",
-      "title": "Top Destinations",
-      "desc": "From imperial cities to blue-washed alleys and golden dunes — each region reveals another layer of Morocco."
+      "title": "Discover the finest Morocco tours",
+      "desc": "Explore Morocco through carefully crafted circuits. From the Merzouga desert to the imperial cities, from the Atlas mountains to Atlantic beaches — authentic journeys with Sahara Visite.",
+      "cards": {
+        "marrakechMerzouga": {
+          "name": "Marrakech → Merzouga",
+          "description": "A 3-day Morocco desert tour through the Atlas mountains, Aït Ben Haddou and the Merzouga dunes.",
+          "alt": "Marrakech Merzouga 3-day tour - Sahara Visite"
+        },
+        "fesMerzouga": {
+          "name": "Fes → Merzouga Desert",
+          "description": "Discover Ifrane, the Ziz Valley and spend a magical night in the Sahara desert.",
+          "alt": "Fes Merzouga desert tour - Sahara Visite"
+        },
+        "chefchaouenAkchour": {
+          "name": "Chefchaouen & Akchour",
+          "description": "Explore the blue city and Akchour waterfalls on a nature day trip.",
+          "alt": "Chefchaouen Akchour excursion - Sahara Visite"
+        },
+        "villesImperiales": {
+          "name": "Imperial Cities Tour",
+          "description": "Casablanca, Rabat, Meknes, Fes and Marrakech on an unforgettable cultural Morocco tour.",
+          "alt": "Morocco Imperial Cities tour - Sahara Visite"
+        }
+      }
     },
     "why": {
       "label": "The MorocElite difference",
@@ -367,6 +397,54 @@
       "title": "The quiet art of Moroccan luxury",
       "p1": "We are a boutique atelier of travel — composing private journeys for guests who value time, beauty, and flawless execution. From the first conversation to your final transfer, a single concierge owns your file.",
       "p2": "Our relationships with riad owners, camp operators, and guides have been cultivated over years. That access translates into rooms held for you, doors opened at the right moment, and itineraries that feel effortless."
+    },
+    "customTravel": {
+      "label": "Your journey, your wishes",
+      "imageAlt": "Custom Morocco tour — Sahara desert and Moroccan landscapes, Sahara Visite",
+      "title": "Create your custom Morocco tour",
+      "description": "At Sahara Visite, every journey is designed especially for you. Whether you dream of a Sahara desert adventure, an imperial cities circuit, an Atlas mountains escape, or a coastal retreat, we craft a fully personalized itinerary — a Morocco Custom Tour tailored to your budget, dates, and passions. From Marrakech and Fes to Chefchaouen and Merzouga, our Morocco Travel Agency delivers private Morocco tours with transparent pricing.",
+      "howItWorks": "How does it work?",
+      "stepsAriaLabel": "Four steps to create your custom Morocco tour",
+      "stepLabel": "Step {{number}}",
+      "steps": [
+        {
+          "title": "Share your wishes",
+          "text": "Tell us your destinations, activities, and interests."
+        },
+        {
+          "title": "We design your itinerary",
+          "text": "Our experts craft a unique Luxury Morocco Tour adapted to your budget and schedule."
+        },
+        {
+          "title": "Review your program",
+          "text": "Receive your personalized proposal and adjust it as needed."
+        },
+        {
+          "title": "Enjoy your journey",
+          "text": "Travel with peace of mind with support before and throughout your stay."
+        }
+      ],
+      "whyChoose": "Why choose Sahara Visite?",
+      "benefitsAriaLabel": "Benefits of our Morocco travel agency",
+      "benefits": [
+        "100% personalized Morocco tour",
+        "Experienced local guides",
+        "Support before and during your trip",
+        "Carefully selected accommodations",
+        "Comfortable vehicles",
+        "Transparent pricing",
+        "Private or group circuits",
+        "Reply within 24 hours"
+      ],
+      "cta": {
+        "sectionTitle": "Request your personalized quote",
+        "title": "Your journey starts here.",
+        "desc": "Tell us about your project and receive a free custom itinerary and no-obligation quote for your Morocco Private Tour.",
+        "createTrip": "Create my trip",
+        "quote": "Request a quote",
+        "createTripAria": "Create your custom Morocco tour with Sahara Visite",
+        "quoteAria": "Request a free quote for your personalized Morocco tour"
+      }
     },
     "testimonials": {
       "label": "Testimonials",
@@ -387,10 +465,85 @@
     "bookNow": "Book Now",
     "enquire": "Enquire",
     "navigate": "Navigate",
+    "circuits": "Tours",
+    "contact": "Contact",
     "follow": "Follow",
     "brandDesc": "Private luxury travel across Morocco. Crafted itineraries, exceptional stays, and seamless service.",
     "allRights": "All rights reserved.",
     "designed": "Designed for the art of slow, elegant travel.",
     "location": "Marrakech & Casablanca"
+  },
+  "circuitsPage": {
+    "home": "Home",
+    "breadcrumb": "Morocco Tours",
+    "label": "Sahara Visite",
+    "title": "Morocco Tours & Circuits",
+    "subtitle": "Desert, imperial cities, Atlas, North, Atlantic coast and day trips — private Morocco itineraries built for travellers and search.",
+    "seoTitle": "Morocco Tours – Desert & Imperial Cities",
+    "seoDescription": "Browse Sahara Visite Morocco Tours: Merzouga desert, Fes, Chefchaouen, Atlas, Essaouira. Private Morocco Tour & best Morocco excursions.",
+    "heroAlt": "Moroccan Sahara dunes at sunset – Sahara Visite tours",
+    "categories": "Tour categories",
+    "all": "All",
+    "count": "{{count}} tours available",
+    "viewCircuit": "View tour",
+    "overview": "Tour overview",
+    "guide": "Complete travel guide",
+    "highlights": "Highlights",
+    "included": "Included",
+    "notIncluded": "Not included",
+    "itinerary": "Day-by-day itinerary",
+    "day": "Day {{day}}",
+    "practical": "Practical information",
+    "tips": "Travel tips",
+    "faq": "Frequently asked questions",
+    "faqIntro": "Clear answers to plan your Morocco trip with Sahara Visite.",
+    "similar": "Similar tours",
+    "tripDetails": "Trip details",
+    "availability": "Availability:",
+    "from": "From:",
+    "to": "To:",
+    "fromPrice": "From",
+    "perAdult": "per adult (indicative)",
+    "bookCta": "Book Now",
+    "quoteCta": "Request a Quote",
+    "quickAnswer": "Quick Answer",
+    "destinations": "Destinations",
+    "blog": "Blog articles",
+    "errorSubmit": "Submission failed. Please try again.",
+    "sections": {
+      "intro": "Introduction",
+      "gallery": "Gallery",
+      "whyChoose": "Why Choose This Tour",
+      "map": "Route Map",
+      "placesVisited": "Places Visited",
+      "whenToGo": "When to Go",
+      "conclusion": "Conclusion",
+      "reviews": "Customer Reviews",
+      "nearbyExcursions": "Nearby Day Trips",
+      "closeGallery": "Close gallery"
+    },
+    "reservation": {
+      "title": "Book this tour",
+      "desc": "Fill in the form — Sahara Visite replies within 24 hours with a tailored quote."
+    },
+    "success": {
+      "text": "Booking request received.",
+      "confirmation": "Confirmation number:"
+    },
+    "form": {
+      "personalInfo": "Personal information",
+      "tripDetails": "Trip details",
+      "firstNamePlaceholder": "First name *",
+      "lastNamePlaceholder": "Last name *",
+      "emailPlaceholder": "Email *",
+      "phonePlaceholder": "Phone *",
+      "nationalityPlaceholder": "Nationality",
+      "specialRequestsPlaceholder": "Special requests: diet, mobility, celebration…",
+      "estimatedTotal": "Estimated total",
+      "adults": "adults",
+      "children": "children",
+      "submitBtn": "Send request",
+      "submitting": "Sending..."
+    }
   }
 }
