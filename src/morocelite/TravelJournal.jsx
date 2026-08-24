@@ -15,7 +15,8 @@ const TravelJournal = () => {
     blogAPI
       .getAll({ limit: 3 })
       .then((res) => {
-        if (!cancelled) setPosts(res.data || res || []);
+        const list = res?.data ?? res;
+        if (!cancelled) setPosts(Array.isArray(list) ? list : []);
       })
       .catch(() => {
         if (!cancelled) setPosts([]);
@@ -25,7 +26,7 @@ const TravelJournal = () => {
     };
   }, []);
 
-  if (!posts.length) return null;
+  if (!Array.isArray(posts) || !posts.length) return null;
 
   return (
     <section
