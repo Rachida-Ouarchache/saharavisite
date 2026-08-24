@@ -14,12 +14,12 @@ const SEO = ({
   noSuffix = false,
 }) => {
   const defaultDesc =
-    'Sahara Visite – agence de voyage Maroc : circuits désert, villes impériales, Atlas et côte Atlantique. Morocco Tours, Private Morocco Tour & Luxury Morocco Tour.';
+    'Sahara Visite – Luxury Morocco Tours, Private Sahara Journeys & tailor-made travel.';
   const fullTitle = title
     ? noSuffix
       ? title
       : `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} – Moroccan Journey Experts`;
+    : `${SITE_NAME} – Luxury Morocco Tours & Private Sahara Journeys`;
   const metaDesc = description || defaultDesc;
   const metaImage = image || SITE_DEFAULT_IMAGE;
   const metaUrl = url ? (url.startsWith('http') ? url : `${SITE_URL}${url}`) : SITE_URL;

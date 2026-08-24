@@ -23,7 +23,6 @@ import CurrencySwitcher from '../components/CurrencySwitcher';
 import { useCurrency } from '../context/CurrencyContext';
 import { useLocalizedCircuit, useSimilarCircuits, useNearbyExcursions } from '../circuits/useLocalizedCircuit';
 import { circuitToTourCard } from '../circuits/toTourCard';
-import { generateReviews } from '../circuits/reviewsPool';
 import { buildCircuitSchemas } from '../utils/circuitJsonLd';
 import { bookingsAPI } from '../utils/api';
 import { getCountries } from '../utils/countries';
@@ -42,7 +41,7 @@ const CircuitDetail = () => {
   const countries = useMemo(() => getCountries(i18n.language), [i18n.language]);
   const similar = useSimilarCircuits(circuit, 4);
   const nearbyExcursions = useNearbyExcursions(circuit, 3);
-  const reviews = useMemo(() => (circuit ? generateReviews(circuit, 3) : []), [circuit]);
+  const reviews = [];
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(null);

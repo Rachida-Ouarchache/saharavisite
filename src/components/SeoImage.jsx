@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { cloudinarySrcSet, cloudinaryUrl, isCloudinaryUrl, unsplashSrcSet } from '../utils/cloudinary';
+
+const FALLBACK_SRC =
+  'https://res.cloudinary.com/dc3uvcobc/image/upload/f_auto,q_auto,w_1200/v1775053542/pixelraw-desert-4944794_1920_csvuni.jpg';
 
 /**
  * SEO-friendly image: alt, title, lazy, dimensions, srcset.
- * Does not alter layout — pass className as usual.
+ * Cloudinary: f_auto, q_auto, responsive widths.
+ * Broken sources fall back silently (no browser broken-image / alt dump).
  */
 const SeoImage = ({
   src,
@@ -16,24 +21,26 @@ const SeoImage = ({
   sizes = '(max-width: 768px) 100vw, 1200px',
   fetchPriority,
 }) => {
-  if (!src) return null;
+  const [failed, setFailed] = useState(false);
 
-  const isCloudinary = src.includes('res.cloudinary.com');
+  if (!src && !failed) return null;
+
+  const rawSrc = failed ? FALLBACK_SRC : src || FALLBACK_SRC;
+  let displaySrc = rawSrc;
   let srcSet;
 
-  if (isCloudinary) {
-    const base = src.replace(/\/upload\/[^/]+\//, '/upload/');
-    const make = (w) => base.replace('/upload/', `/upload/w_${w},q_auto,f_auto/`);
-    srcSet = `${make(480)} 480w, ${make(800)} 800w, ${make(1200)} 1200w, ${make(1600)} 1600w`;
-  } else if (src.includes('images.unsplash.com')) {
-    const clean = src.replace(/[?&]w=\d+/g, '').replace(/\?$/, '');
-    const sep = clean.includes('?') ? '&' : '?';
-    srcSet = `${clean}${sep}w=480&q=80 480w, ${clean}${sep}w=800&q=80 800w, ${clean}${sep}w=1200&q=80 1200w, ${clean}${sep}w=1600&q=80 1600w`;
+  if (!failed && isCloudinaryUrl(rawSrc)) {
+    displaySrc = cloudinaryUrl(rawSrc, { width: Math.min(Number(width) || 1400, 1600) });
+    srcSet = cloudinarySrcSet(rawSrc);
+  } else if (!failed && rawSrc.includes('images.unsplash.com')) {
+    srcSet = unsplashSrcSet(rawSrc);
+  } else if (failed && isCloudinaryUrl(FALLBACK_SRC)) {
+    displaySrc = cloudinaryUrl(FALLBACK_SRC, { width: Math.min(Number(width) || 1400, 1600) });
   }
 
   return (
     <img
-      src={src}
+      src={displaySrc}
       srcSet={srcSet}
       sizes={srcSet ? sizes : undefined}
       alt={alt || ''}
@@ -44,6 +51,9 @@ const SeoImage = ({
       decoding={decoding}
       fetchPriority={fetchPriority}
       className={className}
+      onError={() => {
+        if (!failed) setFailed(true);
+      }}
     />
   );
 };

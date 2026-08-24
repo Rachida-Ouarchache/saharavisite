@@ -2,14 +2,26 @@
   "nav": {
     "home": "الرئيسية",
     "tours": "الجولات",
+    "journeys": "الرحلات",
+    "experiences": "التجارب",
     "destinations": "الوجهات",
     "blog": "المدونة",
+    "journal": "المدونة",
     "about": "من نحن",
     "contact": "اتصل بنا",
-    "bookTour": "احجز جولة",
+    "bookTour": "خطط لرحلتك",
     "admin": "الإدارة",
     "logout": "تسجيل الخروج",
-    "tagline": "رحلات مخصصة عبر المغرب — منذ 2010"
+    "tagline": "رحلات خاصة وفاخرة عبر المغرب",
+    "brandSub": "Luxury Morocco Journeys",
+    "mainAria": "القائمة الرئيسية",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
+  },
+  "cta": {
+    "planJourney": "خطط لرحلتك",
+    "exploreJourneys": "استكشف الرحلات",
+    "talkExpert": "تحدث إلى خبير المغرب"
   },
   "footer": {
     "stayInspired": "ابقَ ملهَماً",
@@ -60,18 +72,42 @@
     "values": {
       "label": "ما يحرّكنا",
       "title": "قيمنا",
-      "authentic": { "title": "تجارب أصيلة", "desc": "نتجاوز الواجهات السياحية لنكشف المغرب الحقيقي." },
-      "quality": { "title": "جودة لا تُجارى", "desc": "أماكن إقامة ومرشدون وتجارب منتقاة بعناية فائقة." },
-      "responsible": { "title": "سياحة مسؤولة", "desc": "ندعم المجتمعات المحلية ونحافظ على الإرث المغربي." },
-      "personalized": { "title": "خدمة مخصصة", "desc": "كل رحلة تُصمَّم حول رغباتك الفريدة." }
+      "authentic": {
+        "title": "تجارب أصيلة",
+        "desc": "نتجاوز الواجهات السياحية لنكشف المغرب الحقيقي."
+      },
+      "quality": {
+        "title": "جودة لا تُجارى",
+        "desc": "أماكن إقامة ومرشدون وتجارب منتقاة بعناية فائقة."
+      },
+      "responsible": {
+        "title": "سياحة مسؤولة",
+        "desc": "ندعم المجتمعات المحلية ونحافظ على الإرث المغربي."
+      },
+      "personalized": {
+        "title": "خدمة مخصصة",
+        "desc": "كل رحلة تُصمَّم حول رغباتك الفريدة."
+      }
     },
     "team": {
       "label": "الأشخاص وراء رحلتك",
       "title": "تعرف على فريقنا",
-      "member1": { "role": "المؤسس والمرشد الرئيسي", "bio": "أكثر من 20 عاماً من الخبرة في الإرشاد عبر المغرب. يتحدث العربية والأمازيغية والفرنسية والإنجليزية." },
-      "member2": { "role": "مديرة التجارب الثقافية", "bio": "متخصصة في الانغماس الثقافي الأصيل ودروس الطهي وورش الحرف اليدوية." },
-      "member3": { "role": "خبير الصحراء والجبال", "bio": "خبير الصحراء ومرشد جبل توبقال المعتمد. قوافله الجمالية أسطورية." },
-      "member4": { "role": "مسؤولة تجربة العملاء", "bio": "تضمن أن تسير كل رحلة صحراء فيزيت بسلاسة تامة من أول استفسار حتى آخر وداع." }
+      "member1": {
+        "role": "المؤسس والمرشد الرئيسي",
+        "bio": "أكثر من 20 عاماً من الخبرة في الإرشاد عبر المغرب. يتحدث العربية والأمازيغية والفرنسية والإنجليزية."
+      },
+      "member2": {
+        "role": "مديرة التجارب الثقافية",
+        "bio": "متخصصة في الانغماس الثقافي الأصيل ودروس الطهي وورش الحرف اليدوية."
+      },
+      "member3": {
+        "role": "خبير الصحراء والجبال",
+        "bio": "خبير الصحراء ومرشد جبل توبقال المعتمد. قوافله الجمالية أسطورية."
+      },
+      "member4": {
+        "role": "مسؤولة تجربة العملاء",
+        "bio": "تضمن أن تسير كل رحلة صحراء فيزيت بسلاسة تامة من أول استفسار حتى آخر وداع."
+      }
     },
     "stats": {
       "years": "سنوات في المجال",
@@ -161,7 +197,10 @@
     "scheduledDepartures": "مواعيد انطلاق محددة",
     "allYear": "طوال العام",
     "maxPax": "حتى {{count}} أشخاص",
-    "viewTour": "عرض الجولة"
+    "viewTour": "عرض الجولة",
+    "discover": "اكتشف الرحلة",
+    "privateJourney": "رحلة خاصة",
+    "from": "من"
   },
   "contact": {
     "hero": {
@@ -342,61 +381,211 @@
   },
   "home": {
     "hero": {
-      "label": "سفر فاخر ومنتقى",
-      "title": "اكتشف فخامة المغرب",
-      "subtitle": "رحلات حصرية مُصمَّمة لتجارب لا تُنسى",
-      "cta": "استكشف التجارب"
+      "label": "سفر فاخر في المغرب",
+      "title": "اكتشف المغرب بما يتجاوز المألوف",
+      "subtitle": "رحلات خاصة وفاخرة عبر مراكش وجبال الأطلس والصحراء وكنوز المغرب الخفية.",
+      "ctaPrimary": "استكشف رحلاتنا",
+      "ctaSecondary": "صمم رحلتي",
+      "cta": "استكشف رحلاتنا",
+      "trust": "جولات خاصة · خبراء محليون · حسب الطلب · مساعدة على مدار الساعة",
+      "imageAlt": "مخيم فاخر في الصحراء عند الغروب"
     },
     "experiences": {
-      "label": "جولاتنا",
-      "title": "جولات في المغرب",
-      "subtitle": "الصحراء والمدن الإمبراطورية وشفشاون والصويرة — أربع جولات مميزة لاكتشاف المغرب.",
-      "mainCircuit": "الجولة الرئيسية",
-      "viewCircuit": "عرض الجولة",
-      "viewAll": "عرض جميع الجولات"
+      "label": "مجموعة مميزة",
+      "title": "رحلاتنا المميزة",
+      "subtitle": "Private itineraries through the desert, imperial cities, Chefchaouen and the Atlantic coast.",
+      "mainCircuit": "مميزة",
+      "viewCircuit": "اكتشف الرحلة",
+      "viewAll": "استكشف الرحلات"
     },
     "destinations": {
-      "label": "استكشف",
-      "title": "اكتشف أجمل جولات المغرب",
-      "desc": "استكشف المغرب عبر جولاتنا المصممة بعناية. من صحراء مرزوكة إلى المدن الإمبراطورية، ومن جبال الأطلس إلى شواطئ الأطلسي — تجارب أصيلة مع صحراء فيزيت.",
+      "label": "استكشف المغرب",
+      "title": "استكشف المغرب",
+      "desc": "من المدائن الإمبراطورية إلى كثبان الصحراء وشواطئ الأطلسي.",
+      "viewAll": "عرض كل الوجهات",
+      "items": {
+        "marrakech": {
+          "name": "Marrakech",
+          "alt": "Marrakech medina and palm groves"
+        },
+        "sahara": {
+          "name": "Sahara",
+          "alt": "Sahara desert dunes at golden hour"
+        },
+        "merzouga": {
+          "name": "Merzouga",
+          "alt": "Merzouga Erg Chebbi dunes"
+        },
+        "atlas": {
+          "name": "Atlas Mountains",
+          "alt": "High Atlas Mountains Morocco"
+        },
+        "ait-ben-haddou": {
+          "name": "Aït Ben Haddou",
+          "alt": "Aït Ben Haddou UNESCO ksar"
+        },
+        "dades": {
+          "name": "Dades Valley",
+          "alt": "Dades Valley road of a thousand kasbahs"
+        },
+        "fes": {
+          "name": "Fes",
+          "alt": "Fes medina and traditional architecture"
+        },
+        "chefchaouen": {
+          "name": "Chefchaouen",
+          "alt": "Blue streets of Chefchaouen"
+        },
+        "essaouira": {
+          "name": "Essaouira",
+          "alt": "Essaouira Atlantic coast ramparts"
+        }
+      },
       "cards": {
         "marrakechMerzouga": {
-          "name": "مراكش → مرزوكة",
-          "description": "جولة 3 أيام عبر جبال الأطلس وآيت بن حدو وكثبان مرزوكة.",
-          "alt": "جولة مراكش مرزوكة 3 أيام - صحراء فيزيت"
+          "name": "Marrakech → Merzouga",
+          "description": "A 3-day Morocco desert tour through the Atlas mountains, Aït Ben Haddou and the Merzouga dunes.",
+          "alt": "Marrakech Merzouga 3-day tour - Sahara Visite"
         },
         "fesMerzouga": {
-          "name": "فاس → صحراء مرزوكة",
-          "description": "اكتشف إفران ووادي زيز واقضِ ليلة سحرية في الصحراء الكبرى.",
-          "alt": "جولة فاس مرزوكة - صحراء فيزيت"
+          "name": "Fes → Merzouga Desert",
+          "description": "Discover Ifrane, the Ziz Valley and spend a magical night in the Sahara desert.",
+          "alt": "Fes Merzouga desert tour - Sahara Visite"
         },
         "chefchaouenAkchour": {
-          "name": "شفشاون وأكشور",
-          "description": "استكشف المدينة الزرقاء وشلالات أكشور في رحلة طبيعية.",
-          "alt": "رحلة شفشاون أكشور - صحراء فيزيت"
+          "name": "Chefchaouen & Akchour",
+          "description": "Explore the blue city and Akchour waterfalls on a nature day trip.",
+          "alt": "Chefchaouen Akchour excursion - Sahara Visite"
         },
         "villesImperiales": {
-          "name": "جولة المدن الإمبراطورية",
-          "description": "الدار البيضاء والرباط ومكناس وفاس ومراكش في رحلة ثقافية لا تُنسى.",
-          "alt": "جولة المدن الإمبراطورية في المغرب - صحراء فيزيت"
+          "name": "Imperial Cities Tour",
+          "description": "Casablanca, Rabat, Meknes, Fes and Marrakech on an unforgettable cultural Morocco tour.",
+          "alt": "Morocco Imperial Cities tour - Sahara Visite"
         }
       }
     },
     "why": {
-      "label": "الفرق مع MorocElite",
-      "title": "لماذا تختارنا",
+      "label": "فرق Sahara Visite",
+      "title": "لماذا تسافر مع Sahara Visite؟",
       "features": {
-        "tailor": { "title": "رحلات مخصصة", "text": "مسارات وإيقاع على المقاس — مُصمَّمة حول جدولك الزمني وشغفك." },
-        "transport": { "title": "نقل خاص", "text": "مركبات فاخرة مع سائق وتحويلات مطار سرية في كل مرحلة." },
-        "accommodation": { "title": "إقامة فاخرة", "text": "رياض ومخيمات صحراوية ومنتجعات خمس نجوم مختارة لخدمتها وأجوائها." },
-        "guides": { "title": "مرشدون محليون خبراء", "text": "مؤرخون ورواة يفتحون أبواباً لا تذكرها أدلة السياحة قط." }
+        "tailor": {
+          "title": "100٪ حسب الطلب",
+          "text": "كل رحلة مصممة من أجلك."
+        },
+        "private": {
+          "title": "تجارب خاصة",
+          "text": "سافر بخصوصية ومرونة تامة."
+        },
+        "experts": {
+          "title": "خبراء مغاربة محليون",
+          "text": "اكتشف المغرب عبر من يعرفونه بعمق."
+        },
+        "luxury": {
+          "title": "فخامة بلا تنازل",
+          "text": "إقامات استثنائية وخدمة وتجارب لا تُنسى."
+        },
+        "transport": {
+          "title": "Private transport",
+          "text": "Chauffeured vehicles and discrete airport transfers."
+        },
+        "accommodation": {
+          "title": "Luxury accommodations",
+          "text": "Riads, desert camps, and lodges vetted for atmosphere."
+        },
+        "guides": {
+          "title": "Expert local guides",
+          "text": "Storytellers who open doors guidebooks never mention."
+        }
       }
     },
+    "experienceBlocks": {
+      "label": "Beyond the itinerary",
+      "title": "Experiences Beyond the Journey",
+      "subtitle": "Moments that define a private Morocco journey — desert, mountains, cuisine and culture.",
+      "cta": "Discover",
+      "items": {
+        "desert": {
+          "title": "Sahara Desert",
+          "desc": "Erg Chebbi dunes, camel treks and nights under desert skies."
+        },
+        "camps": {
+          "title": "Luxury Desert Camps",
+          "desc": "Private tents, refined dining and silent Sahara mornings."
+        },
+        "atlas": {
+          "title": "Atlas Mountains",
+          "desc": "Valleys, Berber villages and mountain escapes near Marrakech."
+        },
+        "gastronomy": {
+          "title": "Moroccan Gastronomy",
+          "desc": "From street flavours to intimate cooking experiences."
+        },
+        "imperial": {
+          "title": "Imperial Cities",
+          "desc": "Fes, Marrakech, Meknes and Rabat — living heritage."
+        },
+        "coast": {
+          "title": "Atlantic Coast",
+          "desc": "Essaouira breeze, seafood and Atlantic light."
+        },
+        "culture": {
+          "title": "Cultural Experiences",
+          "desc": "Artisans, medinas and encounters that feel authentic."
+        }
+      }
+    },
+    "howItWorks": {
+      "label": "Simple process",
+      "title": "Your Journey, Your Way",
+      "steps": {
+        "tell": {
+          "title": "Tell Us Your Dream",
+          "text": "Share your dates, interests and travel style."
+        },
+        "design": {
+          "title": "We Design Your Journey",
+          "text": "Our local experts create your personalized itinerary."
+        },
+        "travel": {
+          "title": "Travel With Confidence",
+          "text": "Enjoy a seamless private journey through Morocco."
+        }
+      }
+    },
+    "accommodation": {
+      "label": "Where you stay",
+      "title": "Exceptional Places to Stay",
+      "subtitle": "We select stays for atmosphere and service — not only for stars.",
+      "items": {
+        "riads": {
+          "title": "Luxury Riads",
+          "desc": "Courtyard calm in the heart of historic medinas."
+        },
+        "camps": {
+          "title": "Desert Camps",
+          "desc": "Comfortable Sahara nights with refined hospitality."
+        },
+        "kasbahs": {
+          "title": "Kasbahs",
+          "desc": "Earthen architecture and southern Morocco character."
+        },
+        "lodges": {
+          "title": "Luxury Lodges",
+          "desc": "Quiet retreats with views of mountains or dunes."
+        }
+      }
+    },
+    "journal": {
+      "label": "Inspiration",
+      "title": "Morocco Travel Journal",
+      "viewAll": "View journal",
+      "readMore": "Read More"
+    },
     "about": {
-      "label": "عن MorocElite",
-      "title": "الفن الهادئ للرفاهية المغربية",
-      "p1": "نحن محترف بوتيك للسفر — نُؤلِّف رحلات خاصة للضيوف الذين يُقدِّرون الوقت والجمال والتنفيذ المثالي. من أول محادثة حتى آخر تحويل، مسؤول خدمة واحد يُشرف على ملفك.",
-      "p2": "علاقاتنا مع أصحاب الرياض ومشغّلي المخيمات والمرشدين نمَت على مدار سنوات. هذا الوصول يترجم إلى غرف محجوزة لك، وأبواب تُفتح في اللحظة المناسبة، وبرامج تبدو سلسة بلا جهد."
+      "label": "About Sahara Visite",
+      "title": "The quiet art of Moroccan luxury",
+      "p1": "We are a boutique atelier of travel — composing private journeys for guests who value time, beauty, and flawless execution.",
+      "p2": "Our relationships with riad owners, camp operators, and guides have been cultivated over years."
     },
     "customTravel": {
       "label": "رحلتك، رغباتك",
@@ -447,18 +636,60 @@
       }
     },
     "testimonials": {
-      "label": "شهادات العملاء",
-      "title": "ثقة المسافرين الراقين",
-      "reviews": [
-        { "quote": "أفضل تجربة فاخرة في المغرب! كل تفصيل كان مدروساً — من الرياض إلى مرشدنا الخاص في المدينة القديمة.", "name": "ألكساندرا م.", "place": "نيويورك" },
-        { "quote": "المخيم الصحراوي فاق كل الخيال. فهمت MorocElite تماماً مستوى الراحة الذي أردناه.", "name": "جيمس وكلير ت.", "place": "لندن" },
-        { "quote": "تخطيط لا تشوبه شائبة وتحفظ تام. اكتشفنا أماكن لم نكن لنجدها بمفردنا أبداً.", "name": "صوفي ل.", "place": "باريس" }
-      ]
+      "label": "قصص المسافرين",
+      "title": "ماذا يقول مسافرونا",
+      "empty": "نُعدّ لعرض تقييمات موثّقة من Google وTripadvisor. تواصل مع فريقنا في هذه الأثناء.",
+      "comingSoon": "Google · Tripadvisor · ضيوف موثّقون"
     },
     "cta": {
-      "title": "هل أنت مستعد لإجازتك الفاخرة؟",
-      "desc": "شارك تواريخك وتفضيلاتك — سيرد فريق الكونسيرج لدينا باقتراح مخصص لك.",
-      "btn": "احجز رحلتك"
+      "label": "خطط لرحلتك",
+      "title": "هل أنت مستعد لتصميم رحلتك في المغرب؟",
+      "desc": "شاركنا تواريخك وتفضيلاتك — سيرد خبراؤنا المحليون باقتراح خاص.",
+      "btn": "خطط لرحلتك"
+    },
+    "trustBar": {
+      "aria": "وعود Sahara Visite",
+      "items": {
+        "private": "جولات خاصة",
+        "experts": "خبراء محليون",
+        "tailor": "حسب الطلب",
+        "assist": "مساعدة على مدار الساعة"
+      }
+    },
+    "journeyMap": {
+      "label": "الرحلة المغربية",
+      "title": "من المدينة الحمراء إلى الصحراء.",
+      "desc": "اتبع الطريق من مراكش عبر جبال الأطلس وصولاً إلى عمق الصحراء.",
+      "aria": "خريطة المغرب: المسار من مراكش إلى الصحراء",
+      "listAria": "وجهات الرحلة من مراكش إلى الصحراء",
+      "oceans": {
+        "atlantic": "المحيط الأطلسي",
+        "mediterranean": "البحر الأبيض المتوسط"
+      },
+      "cities": {
+        "tanger": "طنجة",
+        "chefchaouen": "شفشاون",
+        "fes": "فاس",
+        "rabat": "الرباط",
+        "casablanca": "الدار البيضاء",
+        "essaouira": "الصويرة"
+      },
+      "stops": {
+        "marrakech": "مراكش",
+        "ait": "آيت بن حدو",
+        "ouarzazate": "ورزازات",
+        "dades": "دادس",
+        "merzouga": "مرزوكة",
+        "sahara": "الصحراء"
+      },
+      "blurbs": {
+        "marrakech": "مراكش هي بداية كثير من الرحلات المغربية.",
+        "ait": "قصبة عمرها ألف عام على السفح الجنوبي للأطلس الكبير.",
+        "ouarzazate": "بوابة الصحراء، عند أسوار قصبة تاوريرت.",
+        "dades": "وادي الورود وضوء الأخاديد في الطريق شرقاً.",
+        "merzouga": "أول كثبان عرق الشبي، على حافة الصحراء.",
+        "sahara": "الصمت والضوء الذهبي ومخيم خاص تحت النجوم."
+      }
     }
   },
   "eliteNav": {

@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiMenu, FiX } from 'react-icons/fi';
 import LanguageSwitcher from '../components/LanguageSwitcher';
+import BrandLogo from '../components/BrandLogo';
 
 const MorocEliteNavbar = () => {
   const { t } = useTranslation();
@@ -35,9 +36,14 @@ const MorocEliteNavbar = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'bg-gradient-to-r from-[#0B1D33]/92 via-[#132B45]/90 to-[#0B1D33]/99 backdrop-blur-xl shadow-[0_10px_30px_rgba(11,29,51,0.32)]' : 'bg-transparent'}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 md:h-20 items-center justify-between">
-          <Link to="/" className="font-serif text-xl md:text-2xl tracking-wide text-moroc-gold hover:text-moroc-gold-hover transition-colors duration-500 ease-premium" onClick={closeMenu}>
-            Sahara Visite
+        <div className="flex min-h-[4.75rem] md:min-h-[5.5rem] items-center justify-between py-1.5">
+          <Link
+            to="/"
+            className="inline-flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold/50 rounded-sm"
+            onClick={closeMenu}
+            aria-label="Sahara Visite — Explorez l’authenticité"
+          >
+            <BrandLogo size="header" />
           </Link>
 
           <ul className="hidden lg:flex items-center gap-10">

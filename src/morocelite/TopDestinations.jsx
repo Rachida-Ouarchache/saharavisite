@@ -2,40 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Reveal from '../components/Reveal';
-
-const destinations = [
-  {
-    key: 'marrakechMerzouga',
-    to: '/circuits/marrakech-merzouga-3-jours',
-    image: 'https://res.cloudinary.com/dc3uvcobc/image/upload/v1775672669/a_different_perspective-marrakech-4500910_1280_xwftus.jpg',
-  },
-  {
-    key: 'fesMerzouga',
-    to: '/circuits/fes-merzouga',
-    image: 'https://res.cloudinary.com/dc3uvcobc/image/upload/v1775673144/nike159-merzouga-4686151_640_wg12xk.jpg',
-  },
-  {
-    key: 'chefchaouenAkchour',
-    to: '/circuits/circuit-akchour',
-    image: 'https://res.cloudinary.com/dc3uvcobc/image/upload/v1775672670/travelurdream-morocco-3814316_1280_g6gac4.jpg',
-  },
-  {
-    key: 'villesImperiales',
-    to: '/circuits/casablanca-rabat-meknes-fes-marrakech',
-    image: 'https://res.cloudinary.com/dc3uvcobc/image/upload/v1775672669/monlaw-morocco-3794306_640_wsjcrz.jpg',
-  },
-];
+import SeoImage from '../components/SeoImage';
+import Tilt3D from '../components/Tilt3D';
+import { HOME_DESTINATIONS } from './homeContent';
 
 const TopDestinations = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="destinations" className="bg-moroc-white py-24 md:py-32">
+    <section id="destinations" className="bg-moroc-sand/40 py-20 md:py-28" aria-labelledby="destinations-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16 md:mb-24">
+        <Reveal className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 md:mb-16">
           <div>
-            <p className="text-moroc-gold text-xs uppercase tracking-[0.3em] mb-4">{t('home.destinations.label')}</p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-moroc-black font-medium tracking-tight">
+            <p className="text-moroc-gold text-xs uppercase tracking-[0.3em] mb-4">
+              {t('home.destinations.label')}
+            </p>
+            <h2
+              id="destinations-heading"
+              className="font-serif text-3xl md:text-4xl lg:text-5xl text-moroc-black font-medium tracking-tight"
+            >
               {t('home.destinations.title')}
             </h2>
           </div>
@@ -44,29 +29,41 @@ const TopDestinations = () => {
           </p>
         </Reveal>
 
-        <Reveal delayMs={80} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
-          {destinations.map((d) => {
-            const name = t(`home.destinations.cards.${d.key}.name`);
-            const description = t(`home.destinations.cards.${d.key}.description`);
-            const alt = t(`home.destinations.cards.${d.key}.alt`);
+        <Reveal delayMs={70} className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5 [perspective:1200px]">
+          {HOME_DESTINATIONS.map((d) => (
+            <Tilt3D key={d.slug} max={4.5}>
+            <Link
+              to={d.to}
+              data-cursor
+              className="group relative aspect-[4/5] sm:aspect-[3/4] overflow-hidden block bg-moroc-sand focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold focus-visible:ring-offset-2"
+              aria-label={t(`home.destinations.items.${d.slug}.name`, { defaultValue: d.name })}
+            >
+              <SeoImage
+                src={d.image}
+                alt=""
+                width={800}
+                height={1000}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.05]"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-moroc-black/75 via-moroc-black/15 to-transparent" />
+              <div className="absolute inset-0 flex items-end p-4 sm:p-6">
+                <span className="font-serif text-lg sm:text-2xl text-moroc-white tracking-wide group-hover:text-moroc-gold transition-colors duration-500">
+                  {t(`home.destinations.items.${d.slug}.name`, { defaultValue: d.name })}
+                </span>
+              </div>
+            </Link>
+            </Tilt3D>
+          ))}
+        </Reveal>
 
-            return (
-              <Link
-                key={d.key}
-                to={d.to}
-                title={description}
-                className="group relative aspect-[3/4] overflow-hidden rounded-sm block focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold focus-visible:ring-offset-2"
-              >
-                <img src={d.image} alt={alt} className="w-full h-full object-cover transition-transform duration-700 ease-premium group-hover:scale-[1.06]" />
-                <div className="absolute inset-0 bg-moroc-black/35 group-hover:bg-moroc-black/50 transition-colors duration-500 ease-premium" />
-                <div className="absolute inset-0 flex items-end p-7 md:p-9">
-                  <span className="font-serif text-2xl md:text-3xl text-moroc-white tracking-wide group-hover:text-moroc-gold transition-colors duration-500 ease-premium">
-                    {name}
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
+        <Reveal delayMs={100} className="text-center mt-10 md:mt-14">
+          <Link
+            to="/destinations"
+            className="inline-flex items-center justify-center min-h-11 px-6 py-2.5 text-sm font-semibold tracking-[0.12em] uppercase text-moroc-black border border-moroc-black/15 hover:border-moroc-gold hover:text-moroc-gold transition-all duration-500 ease-premium"
+          >
+            {t('home.destinations.viewAll')}
+          </Link>
         </Reveal>
       </div>
     </section>

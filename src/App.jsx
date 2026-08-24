@@ -21,6 +21,7 @@ const CircuitCategory = lazy(() => import('./pages/CircuitCategory'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Contact = lazy(() => import('./pages/Contact'));
+const SeoHubPage = lazy(() => import('./pages/SeoHubPage'));
 const AdminLogin = lazy(() => import('./pages/Admin/Login'));
 const AdminDashboard = lazy(() => import('./pages/Admin/Dashboard'));
 
@@ -56,6 +57,13 @@ const AppRoutes = () => (
         <Route path="contact" element={<Contact />} />
         <Route path="book/:tourSlug" element={<Contact />} />
       </Route>
+      <Route path="/morocco-tours" element={<Navigate to="/tours" replace />} />
+      <Route path="/luxury-morocco-tours" element={<SeoHubPage />} />
+      <Route path="/private-morocco-tours" element={<SeoHubPage />} />
+      <Route path="/morocco-desert-tours" element={<SeoHubPage />} />
+      <Route path="/sahara-desert-tours" element={<SeoHubPage />} />
+      <Route path="/marrakech-tours" element={<SeoHubPage />} />
+      <Route path="/marrakech-sahara-tour" element={<SeoHubPage />} />
       <Route path="/admin/login" element={<AdminLogin />} />
       <Route
         path="/admin/*"

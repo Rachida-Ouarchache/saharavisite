@@ -114,7 +114,7 @@ const CustomTravel = () => {
               className="absolute inset-0 opacity-[0.07] bg-cover bg-center pointer-events-none"
               style={{
                 backgroundImage:
-                  'url(https://images.unsplash.com/photo-1509023469722-087a5d2169b7?auto=format&fit=crop&w=1200&q=80)',
+                  'url(https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80)',
               }}
               aria-hidden
             />

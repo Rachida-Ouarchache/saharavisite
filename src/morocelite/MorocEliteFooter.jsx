@@ -5,6 +5,7 @@ import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from '../utils/contact';
 import { CIRCUIT_CATEGORIES } from '../circuits/categories';
+import BrandLogo from '../components/BrandLogo';
 
 const social = [
   { icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
@@ -36,7 +37,13 @@ const MorocEliteFooter = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           <div className="lg:col-span-1">
-            <p className="font-serif text-2xl text-moroc-gold tracking-wide mb-4">Sahara Visite</p>
+            <Link
+              to="/"
+              className="inline-flex mb-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold/40 rounded-sm"
+              aria-label="Sahara Visite — Explorez l’authenticité"
+            >
+              <BrandLogo size="footer" />
+            </Link>
             <p className="font-moroc text-sm text-white/55 leading-relaxed max-w-xs">
               {t('eliteNav.brandDesc')}
             </p>

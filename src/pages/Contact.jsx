@@ -3,13 +3,15 @@ import { useSearchParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiCheck, FiPhone, FiMail, FiMapPin, FiClock, FiUser, FiCalendar } from 'react-icons/fi';
 import { bookingsAPI, toursAPI } from '../utils/api';
-import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL, SITE_PHONE_WA } from '../utils/contact';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL, SITE_PHONE_WA, SITE_EMAIL, SITE_EMAIL_MAILTO } from '../utils/contact';
 import { getCountries } from '../utils/countries';
 import SEO from '../components/SEO';
 
 const initialForm = {
   firstName: '', lastName: '', email: '', phone: '', nationality: '',
-  tourName: '', adults: 1, children: 0, startDate: '', specialRequests: '',
+  tourName: '', adults: 1, children: 0, startDate: '', endDate: '',
+  tripDuration: '', preferredDestinations: '', accommodationPreference: '',
+  estimatedBudget: '', experienceType: '', specialRequests: '',
 };
 
 const Contact = () => {
@@ -42,7 +44,22 @@ const Contact = () => {
     setError('');
     setLoading(true);
     try {
-      const payload = { ...form, adults: Number(form.adults), children: Number(form.children) };
+      const extras = [
+        form.tripDuration && `Duration: ${form.tripDuration}`,
+        form.endDate && `Return date: ${form.endDate}`,
+        form.preferredDestinations && `Destinations: ${form.preferredDestinations}`,
+        form.accommodationPreference && `Accommodation: ${form.accommodationPreference}`,
+        form.estimatedBudget && `Budget: ${form.estimatedBudget}`,
+        form.experienceType && `Experience: ${form.experienceType}`,
+      ].filter(Boolean).join('\n');
+      const specialRequests = [form.specialRequests, extras].filter(Boolean).join('\n\n');
+      const payload = {
+        ...form,
+        adults: Number(form.adults),
+        children: Number(form.children),
+        travelersCount: Number(form.adults) + Number(form.children || 0),
+        specialRequests,
+      };
       if (tourData?._id) payload.tourId = tourData._id;
       const res = await bookingsAPI.create(payload);
       setSuccess(res);
@@ -57,15 +74,15 @@ const Contact = () => {
   const contactItems = [
     { icon: <FiMapPin className="text-gold-500" size={18} />, labelKey: 'contact.info.office', value: '12 Rue Moulay Ali Cherif, Guéliz, Marrakech 40000' },
     { icon: <FiPhone className="text-gold-500" size={18} />, labelKey: 'contact.info.phone', value: SITE_PHONE_DISPLAY, href: `tel:${SITE_PHONE_TEL}` },
-    { icon: <FiMail className="text-gold-500" size={18} />, labelKey: 'contact.info.email', value: 'info@royalsaharatours.ma', href: 'mailto:info@royalsaharatours.ma' },
+    { icon: <FiMail className="text-gold-500" size={18} />, labelKey: 'contact.info.email', value: SITE_EMAIL, href: SITE_EMAIL_MAILTO },
     { icon: <FiClock className="text-gold-500" size={18} />, labelKey: 'contact.info.hours', value: 'Mon–Sat: 9:00–18:00 (GMT+1)' },
   ];
 
   return (
     <>
       <SEO
-        title="Book a Tour or Contact Us – Sahara Visite"
-        description="Book a Morocco tour or get in touch with Sahara Visite. We respond within 24 hours to plan your perfect Moroccan journey."
+        title="Plan Your Journey – Sahara Visite"
+        description="Design a private luxury Morocco journey with Sahara Visite. Share your dates, destinations and travel style — we reply within 24 hours."
         url="/contact"
       />
 
@@ -127,24 +144,25 @@ const Contact = () => {
                       </h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.firstName')}</label>
-                          <input type="text" name="firstName" value={form.firstName} onChange={handleChange} required className="input-field" placeholder="Jean" />
+                          <label htmlFor="contact-firstName" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.firstName')}</label>
+                          <input id="contact-firstName" type="text" name="firstName" value={form.firstName} onChange={handleChange} required autoComplete="given-name" className="input-field" placeholder="Jean" />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.lastName')}</label>
-                          <input type="text" name="lastName" value={form.lastName} onChange={handleChange} required className="input-field" placeholder="Dupont" />
+                          <label htmlFor="contact-lastName" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.lastName')}</label>
+                          <input id="contact-lastName" type="text" name="lastName" value={form.lastName} onChange={handleChange} required autoComplete="family-name" className="input-field" placeholder="Dupont" />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.email')}</label>
-                          <input type="email" name="email" value={form.email} onChange={handleChange} required className="input-field" placeholder="jean@example.com" />
+                          <label htmlFor="contact-email" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.email')}</label>
+                          <input id="contact-email" type="email" name="email" value={form.email} onChange={handleChange} required autoComplete="email" className="input-field" placeholder="jean@example.com" />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.phone')}</label>
-                          <input type="tel" name="phone" value={form.phone} onChange={handleChange} required className="input-field" placeholder="+33 6 00 00 00 00" />
+                          <label htmlFor="contact-phone" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.phone')}</label>
+                          <input id="contact-phone" type="tel" name="phone" value={form.phone} onChange={handleChange} required autoComplete="tel" className="input-field" placeholder="+33 6 00 00 00 00" />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.nationality')}</label>
+                          <label htmlFor="contact-nationality" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.nationality')}</label>
                           <select
+                            id="contact-nationality"
                             name="nationality"
                             value={form.nationality}
                             onChange={handleChange}
@@ -168,12 +186,34 @@ const Contact = () => {
                       </h3>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="sm:col-span-2">
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.tourInterest')}</label>
-                          <input type="text" name="tourName" value={form.tourName} onChange={handleChange} required className="input-field" placeholder="e.g. Imperial Cities Tour..." />
+                          <label htmlFor="contact-tourName" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.tourInterest')}</label>
+                          <input id="contact-tourName" type="text" name="tourName" value={form.tourName} onChange={handleChange} required className="input-field" placeholder="e.g. Imperial Cities Tour..." />
                         </div>
                         <div>
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.startDate')}</label>
-                          <input type="date" name="startDate" value={form.startDate} onChange={handleChange} required min={new Date().toISOString().split('T')[0]} className="input-field" />
+                          <label htmlFor="contact-startDate" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.startDate')}</label>
+                          <input id="contact-startDate" type="date" name="startDate" value={form.startDate} onChange={handleChange} required min={new Date().toISOString().split('T')[0]} className="input-field" />
+                        </div>
+                        <div>
+                          <label htmlFor="contact-endDate" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.endDate')}</label>
+                          <input id="contact-endDate" type="date" name="endDate" value={form.endDate} onChange={handleChange} min={form.startDate || new Date().toISOString().split('T')[0]} className="input-field" />
+                        </div>
+                        <div>
+                          <label htmlFor="contact-tripDuration" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.tripDuration')}</label>
+                          <select id="contact-tripDuration" name="tripDuration" value={form.tripDuration} onChange={handleChange} className="input-field">
+                            <option value="">{t('contact.form.select')}</option>
+                            {['3–4 days', '5–7 days', '8–10 days', '11–14 days', '15+ days'].map((d) => (
+                              <option key={d} value={d}>{d}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="contact-experienceType" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.experienceType')}</label>
+                          <select id="contact-experienceType" name="experienceType" value={form.experienceType} onChange={handleChange} className="input-field">
+                            <option value="">{t('contact.form.select')}</option>
+                            {['Luxury', 'Adventure', 'Family', 'Honeymoon', 'Culture', 'Desert', 'Food & Wine', 'Custom'].map((d) => (
+                              <option key={d} value={d}>{t(`contact.form.types.${d}`, { defaultValue: d })}</option>
+                            ))}
+                          </select>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
                           <div>
@@ -190,8 +230,30 @@ const Contact = () => {
                           </div>
                         </div>
                         <div className="sm:col-span-2">
-                          <label className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.specialRequests')}</label>
-                          <textarea name="specialRequests" value={form.specialRequests} onChange={handleChange} rows={4} className="input-field resize-none" placeholder={t('contact.form.specialRequestsPlaceholder')} />
+                          <label htmlFor="contact-destinations" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.preferredDestinations')}</label>
+                          <input id="contact-destinations" type="text" name="preferredDestinations" value={form.preferredDestinations} onChange={handleChange} className="input-field" placeholder={t('contact.form.destinationsPlaceholder')} />
+                        </div>
+                        <div>
+                          <label htmlFor="contact-accommodation" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.accommodation')}</label>
+                          <select id="contact-accommodation" name="accommodationPreference" value={form.accommodationPreference} onChange={handleChange} className="input-field">
+                            <option value="">{t('contact.form.select')}</option>
+                            {['Luxury riads', 'Boutique hotels', 'Desert camps', 'Kasbahs', 'Mix of stays'].map((d) => (
+                              <option key={d} value={d}>{d}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div>
+                          <label htmlFor="contact-budget" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.budget')}</label>
+                          <select id="contact-budget" name="estimatedBudget" value={form.estimatedBudget} onChange={handleChange} className="input-field">
+                            <option value="">{t('contact.form.select')}</option>
+                            {['€1,000–2,000', '€2,000–4,000', '€4,000–7,000', '€7,000+'].map((d) => (
+                              <option key={d} value={d}>{d}</option>
+                            ))}
+                          </select>
+                        </div>
+                        <div className="sm:col-span-2">
+                          <label htmlFor="contact-special" className="block text-xs font-medium text-gray-600 mb-1.5">{t('contact.form.specialRequests')}</label>
+                          <textarea id="contact-special" name="specialRequests" value={form.specialRequests} onChange={handleChange} rows={4} className="input-field resize-none" placeholder={t('contact.form.specialRequestsPlaceholder')} />
                         </div>
                       </div>
                     </div>
@@ -215,7 +277,7 @@ const Contact = () => {
                           {t('contact.form.submitting')}
                         </span>
                       ) : (
-                        tourSlug ? t('contact.form.submitBooking') : t('contact.form.sendMessage')
+                        tourSlug ? t('contact.form.submitBooking') : t('contact.form.createJourney', { defaultValue: 'Create My Journey' })
                       )}
                     </button>
                     <p className="text-center text-xs text-gray-400">{t('contact.form.disclaimer')}</p>

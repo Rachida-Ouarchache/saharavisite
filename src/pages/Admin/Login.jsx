@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { FiMail, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext';
+import BrandLogo from '../../components/BrandLogo';
 
 const AdminLogin = () => {
   const { login, user, isAdmin } = useAuth();
@@ -30,13 +31,9 @@ const AdminLogin = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-900 to-primary-700 flex items-center justify-center p-4">
       <div className="w-full max-w-sm">
-        {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 gradient-gold rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-xl">
-            <span className="text-white font-bold text-3xl">T</span>
-          </div>
-          <h1 className="text-white font-bold text-2xl">Sahara Visite Admin</h1>
-          <p className="text-primary-200 text-sm">Management Portal</p>
+        <div className="text-center mb-8 flex flex-col items-center">
+          <BrandLogo size="admin" />
+          <p className="text-primary-200 text-sm mt-4 tracking-wide">Management Portal</p>
         </div>
 
         {/* Form */}

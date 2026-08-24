@@ -127,7 +127,7 @@ export function buildTouristTripLd(circuit) {
     touristDestination: destination,
   };
 
-  if (circuit.rating?.value && circuit.rating?.count) {
+  if (circuit.ratingVerified && circuit.rating?.value && circuit.rating?.count) {
     schema.aggregateRating = {
       '@type': 'AggregateRating',
       ratingValue: circuit.rating.value,

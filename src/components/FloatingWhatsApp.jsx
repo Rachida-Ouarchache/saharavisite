@@ -15,23 +15,19 @@ const FloatingWhatsApp = () => {
 
   const node = (
     <div
-      className="pointer-events-none fixed bottom-5 right-5 z-[9999] md:bottom-8 md:right-8"
+      className="pointer-events-none fixed bottom-24 right-4 z-[9999] md:bottom-7 md:right-7"
       role="presentation"
     >
-      <div className="pointer-events-auto relative flex h-16 w-16 items-center justify-center">
-        <span
-          className="pointer-events-none absolute h-[4.5rem] w-[4.5rem] translate-x-1 translate-y-1 rounded-full bg-[#25D366]/40 blur-md"
-          aria-hidden
-        />
+      <div className="pointer-events-auto flex h-12 w-12 items-center justify-center md:h-14 md:w-14">
         <a
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(0,0,0,0.28)] ring-2 ring-white/30 transition-transform duration-200 hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.55)] focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
-          aria-label="Contacter sur WhatsApp"
+          className="relative flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_4px_14px_rgba(0,0,0,0.22)] transition-transform duration-200 hover:scale-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#25D366]/50"
+          aria-label="Contact Sahara Visite on WhatsApp"
           title="WhatsApp"
         >
-          <FaWhatsapp className="h-8 w-8" aria-hidden />
+          <FaWhatsapp className="h-6 w-6 md:h-7 md:w-7" aria-hidden />
         </a>
       </div>
     </div>

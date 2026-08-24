@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiFacebook, FiInstagram, FiYoutube, FiMail, FiPhone, FiMapPin } from 'react-icons/fi';
-import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL } from '../utils/contact';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL, SITE_EMAIL } from '../utils/contact';
 import { CIRCUIT_CATEGORIES } from '../circuits/categories';
+import BrandLogo from './BrandLogo';
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -25,7 +26,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-primary-900 text-white">
+    <footer className="relative bg-primary-900 text-white overflow-hidden">
+      <div className="zellige-pattern absolute inset-0 opacity-[0.05] pointer-events-none" aria-hidden />
       {/* Newsletter */}
       <div className="relative border-b border-white/10 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary-800 via-primary-900 to-primary-800" aria-hidden />
@@ -59,14 +61,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2.5 mb-5 group">
-              <div className="w-9 h-9 gradient-gold rounded-sm flex items-center justify-center shadow-md group-hover:scale-105 group-hover:shadow-gold transition-all duration-500 ease-premium">
-                <span className="text-primary-900 font-bold text-lg">T</span>
-              </div>
-              <div>
-                <span className="block text-white font-bold text-xl tracking-wide">Sahara Visite</span>
-                <span className="block text-gold-400 text-[10px] uppercase tracking-[0.2em]">Morocco</span>
-              </div>
+            <Link
+              to="/"
+              className="inline-flex mb-5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold/40 rounded-sm"
+              aria-label="Sahara Visite — Explorez l’authenticité"
+            >
+              <BrandLogo size="footer" className="transition-opacity duration-500 group-hover:opacity-90" />
             </Link>
             <p className="text-primary-200 text-sm leading-relaxed mb-6">
               {t('footer.brandDesc')}
@@ -150,11 +150,11 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:saharavisite@gmail.com"
+                  href={`mailto:${SITE_EMAIL}`}
                   className="flex items-center gap-3 text-sm text-primary-200 hover:text-gold-400 transition-colors duration-300"
                 >
                   <FiMail className="text-gold-400 flex-shrink-0" size={16} />
-                  info@royalsaharatours.ma
+                  {SITE_EMAIL}
                 </a>
               </li>
             </ul>

@@ -2,14 +2,26 @@
   "nav": {
     "home": "Accueil",
     "tours": "Circuits",
+    "journeys": "Voyages",
+    "experiences": "Expériences",
     "destinations": "Destinations",
     "blog": "Blog",
+    "journal": "Journal",
     "about": "À propos",
     "contact": "Contact",
-    "bookTour": "Réserver un circuit",
+    "bookTour": "Planifier mon voyage",
     "admin": "Admin",
     "logout": "Déconnexion",
-    "tagline": "Voyages sur mesure au Maroc — depuis 2010"
+    "tagline": "Voyages privés & luxe à travers le Maroc",
+    "brandSub": "Luxury Morocco Journeys",
+    "mainAria": "Navigation principale",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "cta": {
+    "planJourney": "Planifier mon voyage",
+    "exploreJourneys": "Explorer les voyages",
+    "talkExpert": "Parler à un expert Maroc"
   },
   "footer": {
     "stayInspired": "Restez inspiré",
@@ -60,18 +72,42 @@
     "values": {
       "label": "Ce qui nous anime",
       "title": "Nos valeurs",
-      "authentic": { "title": "Expériences authentiques", "desc": "Nous allons au-delà des façades touristiques pour partager le vrai Maroc." },
-      "quality": { "title": "Qualité irréprochable", "desc": "Hébergements, guides et expériences soigneusement sélectionnés." },
-      "responsible": { "title": "Tourisme responsable", "desc": "Nous soutenons les communautés locales et protégeons le patrimoine marocain." },
-      "personalized": { "title": "Service personnalisé", "desc": "Chaque voyage est conçu autour de vos désirs uniques." }
+      "authentic": {
+        "title": "Expériences authentiques",
+        "desc": "Nous allons au-delà des façades touristiques pour partager le vrai Maroc."
+      },
+      "quality": {
+        "title": "Qualité irréprochable",
+        "desc": "Hébergements, guides et expériences soigneusement sélectionnés."
+      },
+      "responsible": {
+        "title": "Tourisme responsable",
+        "desc": "Nous soutenons les communautés locales et protégeons le patrimoine marocain."
+      },
+      "personalized": {
+        "title": "Service personnalisé",
+        "desc": "Chaque voyage est conçu autour de vos désirs uniques."
+      }
     },
     "team": {
       "label": "Les personnes derrière votre voyage",
       "title": "Notre équipe",
-      "member1": { "role": "Fondateur & Guide principal", "bio": "Plus de 20 ans d'expérience de guide à travers le Maroc. Parle l'arabe, le berbère, le français et l'anglais." },
-      "member2": { "role": "Responsable des expériences culturelles", "bio": "Spécialiste de l'immersion culturelle authentique, des cours de cuisine et des ateliers artisanaux." },
-      "member3": { "role": "Expert désert & montagne", "bio": "Expert du Sahara et guide certifié du Toubkal. Ses caravanes de chameaux sont légendaires." },
-      "member4": { "role": "Responsable de l'expérience client", "bio": "Veille à ce que chaque voyage Sahara Visite se déroule parfaitement, de la première demande au dernier au revoir." }
+      "member1": {
+        "role": "Fondateur & Guide principal",
+        "bio": "Plus de 20 ans d'expérience de guide à travers le Maroc. Parle l'arabe, le berbère, le français et l'anglais."
+      },
+      "member2": {
+        "role": "Responsable des expériences culturelles",
+        "bio": "Spécialiste de l'immersion culturelle authentique, des cours de cuisine et des ateliers artisanaux."
+      },
+      "member3": {
+        "role": "Expert désert & montagne",
+        "bio": "Expert du Sahara et guide certifié du Toubkal. Ses caravanes de chameaux sont légendaires."
+      },
+      "member4": {
+        "role": "Responsable de l'expérience client",
+        "bio": "Veille à ce que chaque voyage Sahara Visite se déroule parfaitement, de la première demande au dernier au revoir."
+      }
     },
     "stats": {
       "years": "Années d'activité",
@@ -161,13 +197,16 @@
     "scheduledDepartures": "Départs programmés",
     "allYear": "Toute l'année",
     "maxPax": "Max {{count}} pers.",
-    "viewTour": "Voir le circuit"
+    "viewTour": "Voir le circuit",
+    "discover": "Découvrir le voyage",
+    "privateJourney": "Voyage privé",
+    "from": "à partir de"
   },
   "contact": {
     "hero": {
       "label": "Nous serions ravis de vous entendre",
       "titleBook": "Réservez votre circuit",
-      "titleContact": "Contact & Réservation"
+      "titleContact": "Planifier mon voyage"
     },
     "booking": {
       "label": "Réservation :",
@@ -175,22 +214,31 @@
     },
     "form": {
       "titleBook": "Finaliser votre réservation",
-      "titleContact": "Envoyez-nous un message",
+      "titleContact": "Planifier mon voyage",
       "personalInfo": "Informations personnelles",
       "firstName": "Prénom *",
       "lastName": "Nom *",
       "email": "Adresse e-mail *",
-      "phone": "Numéro de téléphone *",
-      "nationality": "Nationalité",
+      "phone": "WhatsApp / Téléphone *",
+      "nationality": "Pays",
       "tripDetails": "Détails du voyage",
-      "tourInterest": "Circuit / Destination souhaité(e) *",
-      "startDate": "Date de départ souhaitée *",
+      "tourInterest": "Destinations / voyage souhaité *",
+      "startDate": "Date de départ *",
+      "endDate": "Date de retour",
+      "tripDuration": "Durée du séjour",
+      "experienceType": "Type d'expérience",
+      "preferredDestinations": "Destinations préférées",
+      "destinationsPlaceholder": "Marrakech, Sahara, Atlas, Fès…",
+      "accommodation": "Préférence d'hébergement",
+      "budget": "Budget estimé",
+      "select": "Sélectionner",
       "adults": "Adultes *",
       "children": "Enfants",
-      "specialRequests": "Demandes spéciales ou questions",
-      "specialRequestsPlaceholder": "Régimes alimentaires, besoins de mobilité, occasions spéciales, intérêts particuliers...",
+      "specialRequests": "Demandes spéciales",
+      "specialRequestsPlaceholder": "Régimes alimentaires, célébrations, rythme, incontournables…",
       "submitBooking": "Soumettre la demande de réservation",
       "sendMessage": "Envoyer le message",
+      "createJourney": "Créer mon voyage",
       "submitting": "Envoi en cours...",
       "disclaimer": "Nous répondrons dans les 24 heures. Aucun paiement requis à ce stade.",
       "estimatedTotal": "Total estimé :"
@@ -342,61 +390,211 @@
   },
   "home": {
     "hero": {
-      "label": "Voyage de luxe sur mesure",
-      "title": "Découvrez le luxe du Maroc",
-      "subtitle": "Des voyages exclusifs conçus pour des expériences inoubliables",
-      "cta": "Explorer les expériences"
+      "label": "Voyage de luxe au Maroc",
+      "title": "Découvrez le Maroc autrement",
+      "subtitle": "Voyages privés et luxe à travers Marrakech, l'Atlas, le Sahara et les trésors cachés du Maroc.",
+      "ctaPrimary": "Explorer nos voyages",
+      "ctaSecondary": "Créer mon voyage",
+      "cta": "Explorer nos voyages",
+      "trust": "Circuits privés · Experts locaux · Sur mesure · Assistance 24/7",
+      "imageAlt": "Camp de luxe dans le Sahara au coucher du soleil"
     },
     "experiences": {
-      "label": "Nos circuits",
-      "title": "Circuits au Maroc",
-      "subtitle": "Désert, villes impériales, Chefchaouen et Essaouira — quatre circuits phares pour découvrir le Maroc.",
-      "mainCircuit": "Circuit principal",
-      "viewCircuit": "Voir le circuit",
-      "viewAll": "Voir tous les circuits"
+      "label": "Collection signature",
+      "title": "Nos voyages signature",
+      "subtitle": "Itinéraires privés à travers le désert, les villes impériales, Chefchaouen et la côte atlantique.",
+      "mainCircuit": "Signature",
+      "viewCircuit": "Découvrir le voyage",
+      "viewAll": "Explorer les voyages"
     },
     "destinations": {
-      "label": "Explorer",
-      "title": "Découvrez les plus beaux circuits du Maroc",
-      "desc": "Explorez le Maroc à travers nos circuits soigneusement conçus. Du désert de Merzouga aux villes impériales, des montagnes de l'Atlas aux plages de l'Atlantique, vivez des expériences authentiques avec Sahara Visite.",
+      "label": "Explorer le Maroc",
+      "title": "Explorer le Maroc",
+      "desc": "Des médinas impériales aux dunes du Sahara et aux rivages atlantiques.",
+      "viewAll": "Voir toutes les destinations",
+      "items": {
+        "marrakech": {
+          "name": "Marrakech",
+          "alt": "Médina de Marrakech et palmeraie"
+        },
+        "sahara": {
+          "name": "Sahara",
+          "alt": "Dunes du Sahara à l'heure dorée"
+        },
+        "merzouga": {
+          "name": "Merzouga",
+          "alt": "Dunes d'Erg Chebbi à Merzouga"
+        },
+        "atlas": {
+          "name": "Montagnes de l'Atlas",
+          "alt": "Haut Atlas marocain"
+        },
+        "ait-ben-haddou": {
+          "name": "Aït Ben Haddou",
+          "alt": "Ksar d'Aït Ben Haddou, UNESCO"
+        },
+        "dades": {
+          "name": "Vallée du Dadès",
+          "alt": "Vallée du Dadès, route des mille kasbahs"
+        },
+        "fes": {
+          "name": "Fès",
+          "alt": "Médina de Fès et architecture traditionnelle"
+        },
+        "chefchaouen": {
+          "name": "Chefchaouen",
+          "alt": "Rues bleues de Chefchaouen"
+        },
+        "essaouira": {
+          "name": "Essaouira",
+          "alt": "Remparts d'Essaouira sur l'Atlantique"
+        }
+      },
       "cards": {
         "marrakechMerzouga": {
           "name": "Marrakech → Merzouga",
-          "description": "Circuit de 3 jours à travers les montagnes de l'Atlas, Aït Ben Haddou et les dunes de Merzouga.",
-          "alt": "Circuit Marrakech Merzouga 3 jours - Sahara Visite"
+          "description": "A 3-day Morocco desert tour through the Atlas mountains, Aït Ben Haddou and the Merzouga dunes.",
+          "alt": "Marrakech Merzouga 3-day tour - Sahara Visite"
         },
         "fesMerzouga": {
-          "name": "Fès → Désert de Merzouga",
-          "description": "Découvrez Ifrane, la vallée du Ziz et passez une nuit magique dans le désert du Sahara.",
-          "alt": "Circuit Fès Merzouga - Sahara Visite"
+          "name": "Fes → Merzouga Desert",
+          "description": "Discover Ifrane, the Ziz Valley and spend a magical night in the Sahara desert.",
+          "alt": "Fes Merzouga desert tour - Sahara Visite"
         },
         "chefchaouenAkchour": {
           "name": "Chefchaouen & Akchour",
-          "description": "Explorez la ville bleue et les cascades d'Akchour lors d'une excursion nature.",
-          "alt": "Excursion Chefchaouen Akchour - Sahara Visite"
+          "description": "Explore the blue city and Akchour waterfalls on a nature day trip.",
+          "alt": "Chefchaouen Akchour excursion - Sahara Visite"
         },
         "villesImperiales": {
-          "name": "Circuit des villes impériales",
-          "description": "Casablanca, Rabat, Meknès, Fès et Marrakech dans un voyage culturel inoubliable.",
-          "alt": "Circuit Villes Impériales du Maroc - Sahara Visite"
+          "name": "Imperial Cities Tour",
+          "description": "Casablanca, Rabat, Meknes, Fes and Marrakech on an unforgettable cultural Morocco tour.",
+          "alt": "Morocco Imperial Cities tour - Sahara Visite"
         }
       }
     },
     "why": {
-      "label": "La différence MorocElite",
-      "title": "Pourquoi nous choisir",
+      "label": "La différence Sahara Visite",
+      "title": "Pourquoi voyager avec Sahara Visite ?",
       "features": {
-        "tailor": { "title": "Voyages sur mesure", "text": "Itinéraires et rythmes personnalisés — conçus autour de votre agenda et de vos passions." },
-        "transport": { "title": "Transport privé", "text": "Véhicules de luxe avec chauffeur et transferts aéroport discrets sur chaque étape." },
-        "accommodation": { "title": "Hébergements de luxe", "text": "Riads, camps dans le désert et hôtels cinq étoiles sélectionnés pour leur service et leur atmosphère." },
-        "guides": { "title": "Guides locaux experts", "text": "Des historiens et conteurs qui ouvrent des portes que les guides de voyage ne mentionnent jamais." }
+        "tailor": {
+          "title": "100% Sur mesure",
+          "text": "Chaque voyage est conçu autour de vous."
+        },
+        "private": {
+          "title": "Expériences privées",
+          "text": "Voyagez en privé avec une flexibilité totale."
+        },
+        "experts": {
+          "title": "Experts marocains locaux",
+          "text": "Découvrez le Maroc avec ceux qui le connaissent intimement."
+        },
+        "luxury": {
+          "title": "Luxe sans compromis",
+          "text": "Séjours d'exception, service et expériences inoubliables."
+        },
+        "transport": {
+          "title": "Transport privé",
+          "text": "Véhicules avec chauffeur et transferts discrets."
+        },
+        "accommodation": {
+          "title": "Hébergements de luxe",
+          "text": "Riads, camps du désert et lodges sélectionnés."
+        },
+        "guides": {
+          "title": "Guides experts",
+          "text": "Des conteurs qui ouvrent des portes inédites."
+        }
       }
     },
+    "experienceBlocks": {
+      "label": "Au-delà de l'itinéraire",
+      "title": "Des expériences au-delà du voyage",
+      "subtitle": "Le désert, les montagnes, la gastronomie et la culture.",
+      "cta": "Découvrir",
+      "items": {
+        "desert": {
+          "title": "Désert du Sahara",
+          "desc": "Dunes d'Erg Chebbi, balades à dos de dromadaire et nuits sous les étoiles."
+        },
+        "camps": {
+          "title": "Camps de luxe",
+          "desc": "Tentes privées, table raffinée et matins silencieux."
+        },
+        "atlas": {
+          "title": "Montagnes de l'Atlas",
+          "desc": "Vallées, villages berbères et escapades près de Marrakech."
+        },
+        "gastronomy": {
+          "title": "Gastronomie marocaine",
+          "desc": "Des saveurs de rue aux ateliers de cuisine intimistes."
+        },
+        "imperial": {
+          "title": "Villes impériales",
+          "desc": "Fès, Marrakech, Meknès et Rabat — un patrimoine vivant."
+        },
+        "coast": {
+          "title": "Côte atlantique",
+          "desc": "Essaouira, fruits de mer et lumière de l'Atlantique."
+        },
+        "culture": {
+          "title": "Expériences culturelles",
+          "desc": "Artisans, médinas et rencontres authentiques."
+        }
+      }
+    },
+    "howItWorks": {
+      "label": "Processus simple",
+      "title": "Votre voyage, à votre façon",
+      "steps": {
+        "tell": {
+          "title": "Parlez-nous de votre rêve",
+          "text": "Partagez vos dates, centres d'intérêt et style de voyage."
+        },
+        "design": {
+          "title": "Nous concevons votre voyage",
+          "text": "Nos experts locaux créent votre itinéraire personnalisé."
+        },
+        "travel": {
+          "title": "Voyagez en toute confiance",
+          "text": "Profitez d'un voyage privé fluide à travers le Maroc."
+        }
+      }
+    },
+    "accommodation": {
+      "label": "Où dormir",
+      "title": "Des lieux d'exception",
+      "subtitle": "Nous sélectionnons pour l'atmosphère et le service — pas seulement pour les étoiles.",
+      "items": {
+        "riads": {
+          "title": "Riads de luxe",
+          "desc": "Le calme des cours au cœur des médinas."
+        },
+        "camps": {
+          "title": "Camps du désert",
+          "desc": "Nuits confortables au Sahara, hospitalité raffinée."
+        },
+        "kasbahs": {
+          "title": "Kasbahs",
+          "desc": "Architecture de terre et caractère du sud."
+        },
+        "lodges": {
+          "title": "Lodges de luxe",
+          "desc": "Retraites tranquilles face aux montagnes ou aux dunes."
+        }
+      }
+    },
+    "journal": {
+      "label": "Inspiration",
+      "title": "Journal de voyage Maroc",
+      "viewAll": "Voir le journal",
+      "readMore": "Lire la suite"
+    },
     "about": {
-      "label": "À propos de MorocElite",
-      "title": "L'art discret du luxe marocain",
-      "p1": "Nous sommes un atelier boutique de voyage — composant des voyages privés pour des hôtes qui valorisent le temps, la beauté et l'exécution parfaite. De la première conversation à votre dernier transfert, un seul concierge gère votre dossier.",
-      "p2": "Nos relations avec les propriétaires de riads, les opérateurs de camps et les guides ont été cultivées au fil des années. Cet accès se traduit par des chambres réservées pour vous, des portes ouvertes au bon moment et des itinéraires qui semblent sans effort."
+      "label": "About Sahara Visite",
+      "title": "The quiet art of Moroccan luxury",
+      "p1": "We are a boutique atelier of travel — composing private journeys for guests who value time, beauty, and flawless execution.",
+      "p2": "Our relationships with riad owners, camp operators, and guides have been cultivated over years."
     },
     "customTravel": {
       "label": "Votre voyage, vos envies",
@@ -447,18 +645,60 @@
       }
     },
     "testimonials": {
-      "label": "Témoignages",
-      "title": "La confiance de voyageurs exigeants",
-      "reviews": [
-        { "quote": "La meilleure expérience de luxe au Maroc ! Chaque détail était soigné — du riad à notre guide privé dans la médina.", "name": "Alexandra M.", "place": "New York" },
-        { "quote": "Le camp dans le désert dépassait l'imagination. MorocElite a parfaitement compris le niveau de confort que nous souhaitions.", "name": "James & Claire T.", "place": "Londres" },
-        { "quote": "Planification impeccable et discrétion. Nous avons découvert des endroits que nous n'aurions jamais trouvés seuls.", "name": "Sophie L.", "place": "Paris" }
-      ]
+      "label": "Avis voyageurs",
+      "title": "Ce que disent nos voyageurs",
+      "empty": "Nous préparons l'intégration d'avis vérifiés Google et Tripadvisor. En attendant, contactez notre équipe.",
+      "comingSoon": "Google · Tripadvisor · Voyageurs vérifiés"
     },
     "cta": {
-      "title": "Prêt pour votre escapade de luxe ?",
-      "desc": "Partagez vos dates et préférences — notre équipe de concierges vous répondra avec une proposition sur mesure.",
-      "btn": "Réserver votre voyage"
+      "label": "Planifier mon voyage",
+      "title": "Prêt à concevoir votre voyage au Maroc ?",
+      "desc": "Partagez vos dates et préférences — nos experts locaux vous répondront avec une proposition privée.",
+      "btn": "Planifier mon voyage"
+    },
+    "trustBar": {
+      "aria": "Engagements Sahara Visite",
+      "items": {
+        "private": "Circuits privés",
+        "experts": "Experts locaux",
+        "tailor": "Sur mesure",
+        "assist": "Assistance 24/7"
+      }
+    },
+    "journeyMap": {
+      "label": "Le voyage marocain",
+      "title": "De la ville rouge au Sahara.",
+      "desc": "Suivez la route de Marrakech à travers l'Atlas, jusqu'au cœur du Sahara.",
+      "aria": "Carte du Maroc : itinéraire de Marrakech au Sahara",
+      "listAria": "Destinations du voyage de Marrakech au Sahara",
+      "oceans": {
+        "atlantic": "Océan Atlantique",
+        "mediterranean": "Mer Méditerranée"
+      },
+      "cities": {
+        "tanger": "Tanger",
+        "chefchaouen": "Chefchaouen",
+        "fes": "Fès",
+        "rabat": "Rabat",
+        "casablanca": "Casablanca",
+        "essaouira": "Essaouira"
+      },
+      "stops": {
+        "marrakech": "Marrakech",
+        "ait": "Aït Ben Haddou",
+        "ouarzazate": "Ouarzazate",
+        "dades": "Dadès",
+        "merzouga": "Merzouga",
+        "sahara": "Sahara"
+      },
+      "blurbs": {
+        "marrakech": "Marrakech est le commencement de bien des voyages marocains.",
+        "ait": "Un ksar millénaire sur le versant sud du Haut Atlas.",
+        "ouarzazate": "Porte du désert, au pied de la kasbah Taourirt.",
+        "dades": "Vallée des roses et lumière des gorges, vers l'est.",
+        "merzouga": "Les premières dunes de l'Erg Chebbi, au seuil du Sahara.",
+        "sahara": "Le silence, la lumière dorée, un camp privé sous les étoiles."
+      }
     }
   },
   "eliteNav": {

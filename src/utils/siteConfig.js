@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://royalsaharatours.ma';
 export const SITE_NAME = 'Sahara Visite';
 export const SITE_DEFAULT_IMAGE =
-  'https://images.unsplash.com/photo-1597211684565-dca64d72bdfe?w=1200';
+  'https://res.cloudinary.com/dc3uvcobc/image/upload/f_auto,q_auto,w_1200/v1775053542/pixelraw-desert-4944794_1920_csvuni.jpg';
 export const ORGANIZATION = {
   name: 'Sahara Visite',
   legalName: 'Sahara Visite',
