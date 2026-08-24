@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { shouldUseLuxuryCursor } from '../utils/luxuryMedia';
 
-const LuxuryCursor = () => {
+const Luxury = () => {
   const dot = useRef(null);
   const [on, setOn] = useState(false);
 
@@ -47,4 +47,4 @@ const LuxuryCursor = () => {
   return <div ref={dot} className="luxury-cursor-dot" aria-hidden />;
 };
 
-export default LuxuryCursor;
+export default Luxury;

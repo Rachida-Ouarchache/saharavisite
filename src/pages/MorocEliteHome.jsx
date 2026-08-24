@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import LuxuryCursor from '../components/LuxuryCursor';
+import Luxury from '../components/Luxury';
 import MorocEliteHero from '../morocelite/MorocEliteHero';
 import TrustBar from '../morocelite/TrustBar';
 import WhySaharaVisite from '../morocelite/WhySaharaVisite';
@@ -38,7 +38,7 @@ const MorocEliteHome = () => (
       jsonLd={[buildOrganizationLd(), buildLocalBusinessLd()]}
     />
     <Navbar />
-    <LuxuryCursor />
+    <Luxury />
     <main id="main-content">
       <MorocEliteHero />
       <TrustBar />
