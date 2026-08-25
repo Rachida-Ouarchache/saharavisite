@@ -63,9 +63,12 @@ const MorocEliteNavbar = () => {
             </Link>
           </div>
 
-          <button type="button" className="lg:hidden p-2 text-moroc-gold hover:text-moroc-white transition-colors duration-300" aria-expanded={open} aria-label={open ? t('eliteNav.closeMenu', { defaultValue: 'Close menu' }) : t('eliteNav.openMenu', { defaultValue: 'Open menu' })} onClick={() => setOpen((v) => !v)}>
-            {open ? <FiX className="w-7 h-7" /> : <FiMenu className="w-7 h-7" />}
-          </button>
+          <div className="lg:hidden flex items-center gap-0.5">
+            <LanguageSwitcher />
+            <button type="button" className="p-2 text-moroc-gold hover:text-moroc-white transition-colors duration-300" aria-expanded={open} aria-label={open ? t('eliteNav.closeMenu', { defaultValue: 'Close menu' }) : t('eliteNav.openMenu', { defaultValue: 'Open menu' })} onClick={() => setOpen((v) => !v)}>
+              {open ? <FiX className="w-7 h-7" /> : <FiMenu className="w-7 h-7" />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -78,9 +81,6 @@ const MorocEliteNavbar = () => {
               </NavLink>
             </li>
           ))}
-          <li className="pt-2">
-            <LanguageSwitcher />
-          </li>
           <li className="pt-2">
             <Link to="/contact" className="inline-flex w-full items-center justify-center min-h-12 px-6 py-3.5 text-sm font-semibold tracking-[0.12em] uppercase text-moroc-black bg-moroc-gold border border-moroc-gold rounded-[14px] shadow-gold transition-all duration-500 ease-premium hover:bg-moroc-gold-hover hover:border-moroc-gold-hover hover:-translate-y-0.5 hover:shadow-gold-hover" onClick={closeMenu}>
               {t('eliteNav.bookNow')}

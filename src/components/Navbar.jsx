@@ -161,16 +161,19 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-moroc-white p-2 min-h-11 min-w-11 hover:bg-white/10 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold/50"
-            aria-label={isOpen ? t('nav.closeMenu') : t('nav.openMenu')}
-            aria-expanded={isOpen}
-            aria-controls="mobile-nav"
-          >
-            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-0.5">
+            <LanguageSwitcher />
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-moroc-white p-2 min-h-11 min-w-11 hover:bg-white/10 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-moroc-gold/50"
+              aria-label={isOpen ? t('nav.closeMenu') : t('nav.openMenu')}
+              aria-expanded={isOpen}
+              aria-controls="mobile-nav"
+            >
+              {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -214,9 +217,6 @@ const Navbar = () => {
             )
           )}
           <div className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-3">
-            <div className="px-4">
-              <LanguageSwitcher />
-            </div>
             <Link
               to="/contact"
               className="inline-flex w-full text-center justify-center items-center min-h-12 px-6 py-3.5 text-sm font-semibold tracking-[0.12em] uppercase text-moroc-black bg-moroc-gold border border-moroc-gold"
