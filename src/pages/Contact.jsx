@@ -44,21 +44,14 @@ const Contact = () => {
     setError('');
     setLoading(true);
     try {
-      const extras = [
-        form.tripDuration && `Duration: ${form.tripDuration}`,
-        form.endDate && `Return date: ${form.endDate}`,
-        form.preferredDestinations && `Destinations: ${form.preferredDestinations}`,
-        form.accommodationPreference && `Accommodation: ${form.accommodationPreference}`,
-        form.estimatedBudget && `Budget: ${form.estimatedBudget}`,
-        form.experienceType && `Experience: ${form.experienceType}`,
-      ].filter(Boolean).join('\n');
-      const specialRequests = [form.specialRequests, extras].filter(Boolean).join('\n\n');
       const payload = {
         ...form,
         adults: Number(form.adults),
         children: Number(form.children),
         travelersCount: Number(form.adults) + Number(form.children || 0),
-        specialRequests,
+        endDate: form.endDate || undefined,
+        language: (i18n.language || 'fr').slice(0, 2),
+        source: 'plan-your-journey',
       };
       if (tourData?._id) payload.tourId = tourData._id;
       const res = await bookingsAPI.create(payload);

@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+// In production builds, REACT_APP_API_URL must point at the Express API
+// (e.g. https://api.example.com/api). Falling back to '/api' only works
+// with a reverse proxy or the CRA dev "proxy" — otherwise POSTs get 405.
+const apiBaseURL = (process.env.REACT_APP_API_URL || '/api').replace(/\/$/, '');
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || '/api',
+  baseURL: apiBaseURL,
   timeout: 15000,
   headers: { 'Content-Type': 'application/json' },
 });

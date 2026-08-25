@@ -119,6 +119,7 @@ const CircuitDetail = () => {
         tourName: circuit.title,
         adults: Number(form.adults),
         children: Number(form.children),
+        language: (i18n.language || 'fr').slice(0, 2),
       };
       const res = await bookingsAPI.create(payload);
       setSuccess(res);

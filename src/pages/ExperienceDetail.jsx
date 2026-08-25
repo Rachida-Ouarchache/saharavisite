@@ -36,7 +36,13 @@ const ExperienceDetail = () => {
     setError('');
     setLoading(true);
     try {
-      const payload = { ...form, tourName: experience.title, adults: Number(form.adults), children: Number(form.children) };
+      const payload = {
+        ...form,
+        tourName: experience.title,
+        adults: Number(form.adults),
+        children: Number(form.children),
+        language: (i18n.language || 'fr').slice(0, 2),
+      };
       const res = await bookingsAPI.create(payload);
       setSuccess(res);
       setForm({ firstName: '', lastName: '', email: '', phone: '', nationality: '', startDate: '', adults: 2, children: 0, specialRequests: '' });
