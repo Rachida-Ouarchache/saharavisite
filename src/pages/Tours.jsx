@@ -7,6 +7,7 @@ import SEO from '../components/SEO';
 import { CIRCUIT_CATEGORIES, CIRCUIT_TAGS, circuitMatchesCategory, getTagLabel } from '../circuits/categories';
 import { useLocalizedCircuits, useFilterOptions } from '../circuits/useLocalizedCircuit';
 import { circuitToTourCard } from '../circuits/toTourCard';
+import { SHOW_CIRCUIT_PRICES } from '../circuits/pricing';
 import { buildBreadcrumbLd, buildOrganizationLd, buildLocalBusinessLd } from '../utils/circuitJsonLd';
 import { SITE_URL } from '../utils/siteConfig';
 
@@ -96,8 +97,12 @@ const Tours = () => {
 
   const sortOptions = [
     { value: '', label: t('tours.sort.recommended') },
-    { value: 'price_asc', label: t('tours.sort.priceAsc') },
-    { value: 'price_desc', label: t('tours.sort.priceDesc') },
+    ...(SHOW_CIRCUIT_PRICES
+      ? [
+          { value: 'price_asc', label: t('tours.sort.priceAsc') },
+          { value: 'price_desc', label: t('tours.sort.priceDesc') },
+        ]
+      : []),
     { value: 'duration_asc', label: t('tours.sort.durationAsc') },
     { value: 'duration_desc', label: t('tours.sort.durationDesc') },
     { value: 'rating', label: t('tours.sort.rating') },

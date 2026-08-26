@@ -1,4 +1,5 @@
 import { ORGANIZATION, SITE_NAME, SITE_URL } from './siteConfig';
+import { SHOW_CIRCUIT_PRICES } from '../circuits/pricing';
 
 export function buildOrganizationLd() {
   return {
@@ -80,10 +81,14 @@ export function buildTouristTripLd(circuit) {
   const offer = {
     '@type': 'Offer',
     url,
-    priceCurrency: 'EUR',
-    price: String(circuit.fromPrice || 0),
     availability: 'https://schema.org/InStock',
     category: 'TouristTrip',
+    ...(SHOW_CIRCUIT_PRICES
+      ? {
+          priceCurrency: 'EUR',
+          price: String(circuit.fromPrice || 0),
+        }
+      : {}),
   };
 
   const destination = circuit.destinations?.[0]

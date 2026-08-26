@@ -5,6 +5,7 @@ import { FiClock, FiMapPin } from 'react-icons/fi';
 import SeoImage from './SeoImage';
 import Tilt3D from './Tilt3D';
 import { useCurrency } from '../context/CurrencyContext';
+import { SHOW_CIRCUIT_PRICES } from '../circuits/pricing';
 
 /**
  * Unified circuit card — homepage Featured Journeys + /tours grids.
@@ -37,7 +38,7 @@ const TourCard = ({ tour, featuredLabel = false }) => {
   const to =
     toLocation || (destinations?.length > 1 ? destinations[destinations.length - 1]?.name : from) || '';
   const routeLabel = from && to ? `${from} → ${to}` : region || from || to;
-  const displayPrice = fromPrice ?? price;
+  const displayPrice = SHOW_CIRCUIT_PRICES ? (fromPrice ?? price) : null;
 
   return (
     <Tilt3D className="h-full">

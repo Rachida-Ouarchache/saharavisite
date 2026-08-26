@@ -23,6 +23,7 @@ import CurrencySwitcher from '../components/CurrencySwitcher';
 import { useCurrency } from '../context/CurrencyContext';
 import { useLocalizedCircuit, useSimilarCircuits, useNearbyExcursions } from '../circuits/useLocalizedCircuit';
 import { circuitToTourCard } from '../circuits/toTourCard';
+import { SHOW_CIRCUIT_PRICES } from '../circuits/pricing';
 import { buildCircuitSchemas } from '../utils/circuitJsonLd';
 import { bookingsAPI } from '../utils/api';
 import { getCountries } from '../utils/countries';
@@ -493,16 +494,18 @@ const CircuitDetail = () => {
                   )}
                 </div>
 
-                <div className="mt-8 border-t border-moroc-black/[0.08] pt-6">
-                  <div className="flex items-center justify-between gap-3 mb-2">
-                    <p className="text-xs uppercase tracking-[0.18em] text-moroc-black/50">
-                      {t('circuitsPage.fromPrice')}
-                    </p>
-                    <CurrencySwitcher />
+                {SHOW_CIRCUIT_PRICES && (
+                  <div className="mt-8 border-t border-moroc-black/[0.08] pt-6">
+                    <div className="flex items-center justify-between gap-3 mb-2">
+                      <p className="text-xs uppercase tracking-[0.18em] text-moroc-black/50">
+                        {t('circuitsPage.fromPrice')}
+                      </p>
+                      <CurrencySwitcher />
+                    </div>
+                    <p className="font-serif text-3xl text-moroc-black">{format(circuit.fromPrice)}</p>
+                    <p className="text-sm text-moroc-black/60">{t('circuitsPage.perAdult')}</p>
                   </div>
-                  <p className="font-serif text-3xl text-moroc-black">{format(circuit.fromPrice)}</p>
-                  <p className="text-sm text-moroc-black/60">{t('circuitsPage.perAdult')}</p>
-                </div>
+                )}
 
                 <div className="mt-8 grid grid-cols-1 gap-3">
                   <a
@@ -702,10 +705,12 @@ const CircuitDetail = () => {
                     </div>
                   </div>
 
-                  <div className="bg-[#FAF7F2] border border-moroc-black/[0.08] p-4 flex items-center justify-between">
-                    <p className="text-sm text-moroc-black/70">{t('circuitsPage.form.estimatedTotal')}</p>
-                    <p className="font-serif text-2xl text-moroc-black">{format(estimatedTotal)}</p>
-                  </div>
+                  {SHOW_CIRCUIT_PRICES && (
+                    <div className="bg-[#FAF7F2] border border-moroc-black/[0.08] p-4 flex items-center justify-between">
+                      <p className="text-sm text-moroc-black/70">{t('circuitsPage.form.estimatedTotal')}</p>
+                      <p className="font-serif text-2xl text-moroc-black">{format(estimatedTotal)}</p>
+                    </div>
+                  )}
 
                   <button
                     type="submit"
